@@ -1,20 +1,26 @@
 /*
  * If wanting to edit displayed message, navigate to section labeled client control below
- * 
+ *
  * Created by:
  *  Tyler Nelson
  *  Nick Weiser
  *  Harrison Shirley
  *  Luis Bariuan
  *  2019
- * 
+ *
+ * Wireless Implentation Created by:
+ *  Noah Silva
+ *  Jin Weckle
+ *  Lochlin Craig
+ *
+ *
  * INITIAL SETUP:
  *  1. Download FastLED library from github   https://github.com/FastLED/FastLED
  *  2. Import library                         Sketch>Include Library>Add .ZIP Library
  *  3. Change FastLED version to 3.2.3        Sketch>Include Library>Manage Libraries...>Search "FastLED">Version 3.2.3>Install
  *  4. Edit Board                             Tools>Board>Arduino/Genuino Mega or Mega 2560
  *  5. Edit Port                              Tools>Port>Select Port (Typically COM 3, should have board name next to port)
- *  
+ *
  *  WIRING:
  *    Each LEDstrip needs to have :
  *     Ground(black) wire going to the arduino board as well as to the wall source
@@ -52,7 +58,7 @@
 #include <power_mgt.h>
 
 //Desired output pins on Arduino Mega 2560
-#define LED_PIN0  49 //Wire #1    TOP 
+#define LED_PIN0  49 //Wire #1    TOP
 #define LED_PIN1  44 //Wire #2
 #define LED_PIN2  41 //Wire #3
 #define LED_PIN3  38 //Wire #4
@@ -64,7 +70,7 @@
 #define LED_PIN9  22 //Wire #10  BOTTOM
 
 //Length of LED Strips measured in LEDs (increasing this number increases required memory)
-#define NUM_LEDS  100 
+#define NUM_LEDS  100
 
 //Number of LED Strips (if changing this, you need to edit the cycle functions)
 #define NUM_ROWS 10
@@ -84,7 +90,7 @@
  * Insert desired message between quotations *KEEP QUOTATIONS AND SEMI-COLON AT END!*
  * Ex:
  * char WORD[] = "Insert message here";
- * 
+ *
  * Only recognizes characters [A-Z],[0-9], ?, !, :, .
  */
 
@@ -94,14 +100,14 @@ char WORD[] = "This is the changed text!";
 
 /*
  * When finished, click the arrow pointing to the right at the top of the page to upload to running board
- * 
+ *
  * NOTE: If the project says "Error Compiling:"
  *  1. Make sure the board and computer is securely connected
  *  2. Make sure Board is selected as "Arduino/Genuino Mega or Mega 2560" Tools>Board
  *  3. Make sure port corresponds with usb port being used. Typically COM 3 (Should probably have board name next to COM in list) Tools>Port
  *  4. If steps 1-3 don't work, try adding a space/spaces to the front and/or end to your message and try uploading again
  *    - char WORD[] = "   Insert message here    ";
- *  5. Seek help from computer science students or teacher  
+ *  5. Seek help from computer science students or teacher
  */
 
 
@@ -687,20 +693,20 @@ void setup() {
   FastLED.addLeds<WS2812, LED_PIN7>(ledsRow7, NUM_LEDS);
   FastLED.addLeds<WS2812, LED_PIN8>(ledsRow8, NUM_LEDS);
   FastLED.addLeds<WS2812, LED_PIN9>(ledsRow9, NUM_LEDS);
-  
+
   //LED light setup for each LED
   //NOTE: Parameters are GRB (Green, Red, Blue) NOT RGB (Red, Green, Blue)
   for ( int i = 0; i < NUM_LEDS; i++) {
     ledsRow0[i] = CRGB (bgrdGreen, bgrdRed, bgrdBlue);
-    ledsRow1[i] = CRGB (bgrdGreen, bgrdRed, bgrdBlue); 
-    ledsRow2[i] = CRGB (bgrdGreen, bgrdRed, bgrdBlue); 
-    ledsRow3[i] = CRGB (bgrdGreen, bgrdRed, bgrdBlue); 
-    ledsRow4[i] = CRGB (bgrdGreen, bgrdRed, bgrdBlue); 
+    ledsRow1[i] = CRGB (bgrdGreen, bgrdRed, bgrdBlue);
+    ledsRow2[i] = CRGB (bgrdGreen, bgrdRed, bgrdBlue);
+    ledsRow3[i] = CRGB (bgrdGreen, bgrdRed, bgrdBlue);
+    ledsRow4[i] = CRGB (bgrdGreen, bgrdRed, bgrdBlue);
     ledsRow5[i] = CRGB (bgrdGreen, bgrdRed, bgrdBlue);
-    ledsRow6[i] = CRGB (bgrdGreen, bgrdRed, bgrdBlue); 
-    ledsRow7[i] = CRGB (bgrdGreen, bgrdRed, bgrdBlue); 
-    ledsRow8[i] = CRGB (bgrdGreen, bgrdRed, bgrdBlue); 
-    ledsRow9[i] = CRGB (bgrdGreen, bgrdRed, bgrdBlue); 
+    ledsRow6[i] = CRGB (bgrdGreen, bgrdRed, bgrdBlue);
+    ledsRow7[i] = CRGB (bgrdGreen, bgrdRed, bgrdBlue);
+    ledsRow8[i] = CRGB (bgrdGreen, bgrdRed, bgrdBlue);
+    ledsRow9[i] = CRGB (bgrdGreen, bgrdRed, bgrdBlue);
   }
 }
 
@@ -709,8 +715,8 @@ void loop() {
   int left = TOP_LEFT;
 
   /*
-   * Cycles through desired message 
-   * Detects each character and calls corresponding function  
+   * Cycles through desired message
+   * Detects each character and calls corresponding function
    * Draws character 1 based off "left", subtracts the length of character 1 from "left", draws character 2 off new point, repeat for each letter
    */
   for (int i = 0; i < sizeof WORD; i++) {
@@ -818,11 +824,11 @@ void loop() {
 
   //Tells FastLED to update which lights are on/off
   FastLED.show();
-  
+
   //Time between each shift of the lights down the strip (measured in ms)
   delay();
 
-  //Moves the TOP_LEFT down one position on the strip then repeats the process 
+  //Moves the TOP_LEFT down one position on the strip then repeats the process
   TOP_LEFT++;
 }
 
@@ -831,13 +837,13 @@ void loop() {
  * The reason there is three of them is to compensate for the three different lengths of characters
  * C/C++ requires that 2D arrays being passed into a function have a preset number of columns
  * Could be a future improvement so any length of character is allowed (Perhaps flipping the 2D arrays?)
- * 
+ *
  * Cycles through the 2D array of the letter passed in
  * If it finds a 1, it sets the corresponding light to be lit, if 0, turns corresponding light off
  */
 int cycleLetters5(byte letter[][5], int left) {
   for ( int i = 0; i < sizeof letter[0] / sizeof( byte); i++) {
-    
+
     //checking if corresponding light is on the board yet
     if (left - i < 0) {
       return 0;
