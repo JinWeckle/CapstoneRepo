@@ -12,7 +12,7 @@
  *  Noah Silva
  *  Jin Weckle
  *  Lochlin Craig
- *
+ *  2020
  *
  * INITIAL SETUP:
  *  1. Download FastLED library from github   https://github.com/FastLED/FastLED
