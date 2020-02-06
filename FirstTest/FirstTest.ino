@@ -19,7 +19,7 @@ AltSoftSerial BTserial;
  
  
 char c=' ';
-char b='high';
+//char b='high';
 boolean NL = true;
 
 const int ledPin =  53;
@@ -50,9 +50,13 @@ void loop()
         // 49 is the ascii code for "1"
         // 48 is the ascii code for "0"
         
-        if (c==49)   { digitalWrite(ledPin,HIGH);   }
-        if (c==48)   { digitalWrite(ledPin,LOW);    }
-        Serial.println(c);
+        if (c==1)   { digitalWrite(ledPin,HIGH);   }
+        if (c==0)   { digitalWrite(ledPin,LOW);    }
+        //if(c==0x68656c6c6f)
+        {
+          //digitalWrite(ledPin,LOW);
+        }
+        //Serial.println(c);
     }
  
  
@@ -71,7 +75,7 @@ void loop()
         // If there is a new line print the ">" character.
         if (NL) { Serial.print("\r\n>");  NL = false; }
         Serial.write(c);
-        //if (c==10) { NL = true; }
+        if (c==10) { NL = true; }
     }
 
 }
