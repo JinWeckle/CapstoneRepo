@@ -19,6 +19,7 @@ AltSoftSerial BTserial;
  
  
 char c=' ';
+char b='high';
 boolean NL = true;
 
 const int ledPin =  53;
@@ -34,20 +35,24 @@ pinMode(ledPin, OUTPUT);
  
     BTserial.begin(9600);  
     Serial.println("BTserial started at 9600");
+    
 }
  
 void loop()
 {
-    Serial.print(c);
-    if(c == "high")
-    {
-      digitalWrite(ledPin, HIGH);
-    }
+    //Serial.print(c);
+
     // Read from the Bluetooth module and send to the Arduino Serial Monitor
     if (BTserial.available())
     {
         c = BTserial.read();
-        Serial.write(c);
+        Serial.write(c); 
+        // 49 is the ascii code for "1"
+        // 48 is the ascii code for "0"
+        
+        if (c==49)   { digitalWrite(ledPin,HIGH);   }
+        if (c==48)   { digitalWrite(ledPin,LOW);    }
+        Serial.println(c);
     }
  
  
@@ -68,4 +73,5 @@ void loop()
         Serial.write(c);
         //if (c==10) { NL = true; }
     }
+
 }
