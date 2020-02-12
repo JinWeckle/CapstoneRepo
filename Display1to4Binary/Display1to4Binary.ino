@@ -1,5 +1,7 @@
 #include <AltSoftSerial.h>
 AltSoftSerial BTserial;
+#include <stdio.h>
+#include <string.h>
 //  SerialIn_SerialOut_HM-10_01
 //
 //  Uses hardware serial to talk to the host computer and AltSoftSerial for communication with the bluetooth module
@@ -13,16 +15,25 @@ AltSoftSerial BTserial;
 //  BT GND to GND
 //  Arduino D8 (SS RX) - BT TX no need voltage divider 
 //  Arduino D9 (SS TX) - BT RX through a voltage divider (5v to 3.3v)
-
+//
+ 
+ 
 char c=' ';
 //char b='high';
 boolean NL = true;
 
 const int ledPin0 =  47;
+const int ledPin1 =  49;
+const int ledPin2 =  51;
+const int ledPin3 =  53;
+//String tempVar = "";
 void setup() 
 {
   
     pinMode(ledPin0, OUTPUT);
+    pinMode(ledPin1, OUTPUT);
+    pinMode(ledPin2, OUTPUT);
+    pinMode(ledPin3, OUTPUT);
     
     Serial.begin(9600);
     Serial.print("Sketch:   ");   Serial.println(__FILE__);
@@ -32,6 +43,14 @@ void setup()
     BTserial.begin(9600);  
     Serial.println("BTserial started at 9600");
     
+}
+
+void pinReset()
+{
+  digitalWrite(ledPin0,LOW);
+  digitalWrite(ledPin1,LOW);
+  digitalWrite(ledPin2,LOW);
+  digitalWrite(ledPin3,LOW);
 }
  
 void loop()
@@ -48,12 +67,53 @@ void loop()
      
         if (c==0)   
         { 
-          digitalWrite(ledPin0,LOW);
+          pinReset();
         }     
         if (c==1)   
         { 
+          pinReset();
           digitalWrite(ledPin0,HIGH);
+          digitalWrite(ledPin1,LOW);
+          digitalWrite(ledPin2,LOW);
+          digitalWrite(ledPin3,LOW);
+        }     
+        if (c==2)   
+        { 
+          pinReset();
+          digitalWrite(ledPin0,LOW);
+          digitalWrite(ledPin1,HIGH);
+          digitalWrite(ledPin2,LOW);
+          digitalWrite(ledPin3,LOW);
+        }     
+        if (c==3)   
+        { 
+          pinReset();
+          digitalWrite(ledPin0,HIGH);
+          digitalWrite(ledPin1,HIGH);
+          digitalWrite(ledPin2,LOW);
+          digitalWrite(ledPin3,LOW);
         }
+        if (c==4)   
+        { 
+          pinReset();
+          digitalWrite(ledPin0,LOW);
+          digitalWrite(ledPin1,LOW);
+          digitalWrite(ledPin2,HIGH);
+          digitalWrite(ledPin3,LOW);
+        }
+        //if(str=='TEST')
+        {
+          pinReset();
+          digitalWrite(ledPin0,HIGH);
+          digitalWrite(ledPin1,HIGH);
+          digitalWrite(ledPin2,HIGH);
+          digitalWrite(ledPin3,HIGH);
+        }
+        //if(c==0x68656c6c6f)
+        {
+          //digitalWrite(ledPin,LOW);
+        }
+        //Serial.println(c);
     }
  
  
