@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextAppearance.Dialog.Info" parent="@android:style/TextAppearance.Holo.Small">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+    </style>
+    <style name="TextAppearance.Dialog.Message" parent="@android:style/TextAppearance.Holo.Small">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+    <style name="TextAppearance.Dialog.Title" parent="@android:style/TextAppearance.Holo.Large">
+        <item name="android:textSize">24.0sp</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+    </style>
+</resources>

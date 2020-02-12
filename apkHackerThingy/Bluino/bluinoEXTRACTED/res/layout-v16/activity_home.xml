@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sharedcode.turboeditor.views.CustomDrawerLayout android:id="@id/drawer_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ads="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/text_size_mega_title" android:textColor="@android:color/secondary_text_dark" android:gravity="center" android:id="@id/no_file_opened_messagge" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/open_a_file" android:fontFamily="sans-serif-light" />
+    <RelativeLayout android:id="@id/contentFrameLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/adView" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+            <include layout="@layout/toolbar" />
+            <FrameLayout android:id="@id/text_editor" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <sharedcode.turboeditor.views.GoodScrollView android:id="@id/vertical_scroll" android:background="@null" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+                    <HorizontalScrollView android:id="@id/horizontal_scroll" android:background="@null" android:scrollbars="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true">
+                        <view android:gravity="start|center|top" android:id="@id/editor" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:bufferType="spannable" android:text="" android:cursorVisible="true" android:singleLine="false" android:textIsSelectable="true" android:textCursorDrawable="@null" class="sharedcode.turboeditor.activity.MainActivity$Editor" />
+                    </HorizontalScrollView>
+                </sharedcode.turboeditor.views.GoodScrollView>
+                <com.faizmalkani.floatingactionbutton.FloatingActionButton android:layout_gravity="bottom|center|right" android:id="@id/fabNext" android:visibility="invisible" android:layout_width="72.0dip" android:layout_height="72.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="66.0dip" />
+                <com.faizmalkani.floatingactionbutton.FloatingActionButton android:layout_gravity="bottom|center|right" android:id="@id/fabPrev" android:visibility="invisible" android:layout_width="72.0dip" android:layout_height="72.0dip" android:layout_marginRight="100.0dip" android:layout_marginBottom="66.0dip" />
+                <HorizontalScrollView android:layout_gravity="bottom" android:id="@id/parent_accessory_view" android:scrollbars="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip" android:fillViewport="false">
+                    <sharedcode.turboeditor.util.AccessoryView android:id="@id/accessoryView" android:layout_width="fill_parent" android:layout_height="50.0dip" />
+                </HorizontalScrollView>
+            </FrameLayout>
+        </LinearLayout>
+        <com.google.android.gms.ads.AdView android:id="@id/adView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" ads:adSize="SMART_BANNER" ads:adUnitId="@string/banner_ad_unit_id" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_gravity="start" android:id="@id/drawer_files" android:background="@color/navigation_drawer_background_inverted" android:layout_width="@dimen/navigation_drawer_width" android:layout_height="fill_parent">
+        <ListView android:id="@android:id/list" android:background="@null" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="?selectableItemBackground" android:cacheColorHint="@android:color/transparent" android:divider="@color/divider" android:choiceMode="singleChoice" android:layout_above="@id/drawer_buttons" />
+        <TextView android:textSize="@dimen/text_size_mega_title" android:textColor="@android:color/secondary_text_dark" android:gravity="center" android:id="@android:id/empty" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/recent_files" android:layout_above="@id/drawer_buttons" android:fontFamily="sans-serif-light" />
+        <LinearLayout android:orientation="vertical" android:id="@id/drawer_buttons" android:layout_width="fill_parent" android:layout_height="216.0dip" android:layout_alignParentBottom="true">
+            <View android:background="@color/divider_inverted" android:layout_width="fill_parent" android:layout_height="@dimen/line_dimension" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/navigation_drawer_button_text_color_inverted" android:gravity="center_vertical" android:background="?selectableItemBackground" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="54.0dip" android:text="@string/new_file" android:onClick="CreateFile" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/navigation_drawer_button_text_color_inverted" android:gravity="center_vertical" android:background="?selectableItemBackground" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="54.0dip" android:text="@string/open_a_file" android:onClick="OpenFile" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/navigation_drawer_button_text_color_inverted" android:gravity="center_vertical" android:background="?selectableItemBackground" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="54.0dip" android:text="@string/preferenze" android:onClick="OpenSettings" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/navigation_drawer_button_text_color_inverted" android:gravity="center_vertical" android:background="?selectableItemBackground" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="@string/info" android:onClick="OpenInfo" />
+        </LinearLayout>
+    </RelativeLayout>
+    <fragment android:name="sharedcode.turboeditor.preferences.SettingsFragment" android:layout_gravity="end" android:id="@id/drawer_settings" android:layout_width="@dimen/navigation_drawer_width" android:layout_height="fill_parent" />
+</sharedcode.turboeditor.views.CustomDrawerLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="64.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textColor="@color/navigation_drawer_button_text_color_inverted" android:id="@android:id/text1" android:paddingLeft="16.0dip" android:paddingRight="8.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="5.0" android:paddingStart="16.0dip" android:paddingEnd="8.0dip" />
+    <ImageView android:id="@id/button_remove_from_list" android:padding="15.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_close_dark" android:layout_weight="1.0" />
+</LinearLayout>

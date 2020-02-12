@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_action_save" android:id="@id/im_save_normaly" android:title="@string/salva" app:showAsAction="ifRoom" />
+    <item android:icon="@drawable/ic_action_undo" android:id="@id/im_undo" android:title="@string/testo_indietro" app:showAsAction="ifRoom" />
+    <item android:icon="@drawable/ic_action_redo" android:id="@id/im_redo" android:title="@string/testo_rifai" app:showAsAction="ifRoom" />
+    <item android:icon="@drawable/ic_action_upload" android:id="@id/im_upload2" android:title="@string/upload2" app:showAsAction="ifRoom" />
+    <item android:icon="@drawable/ic_action_monitor" android:id="@id/im_monitor" android:title="@string/serial_monitor" app:showAsAction="ifRoom" />
+    <item android:id="@id/im_search" android:title="@string/find" app:showAsAction="never" />
+    <item android:id="@id/im_save_as" android:title="@string/save_as" app:showAsAction="never" />
+    <item android:id="@id/im_rename" android:title="@string/rinomina" app:showAsAction="never" />
+    <item android:id="@id/im_goto_line" android:title="@string/goto_line" app:showAsAction="never" />
+    <item android:id="@id/im_view_markdown" android:title="@string/view_markdown_result" app:showAsAction="never" />
+    <item android:id="@id/im_share" android:title="@string/share" app:showAsAction="never" app:actionProviderClass="android.support.v7.widget.ShareActionProvider" />
+    <item android:id="@id/im_info" android:title="@string/info" app:showAsAction="never" />
+</menu>

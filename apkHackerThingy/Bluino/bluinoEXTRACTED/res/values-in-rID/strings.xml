@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="accessory_view">Tampilan Accessory</string>
+    <string name="app_version_new">v%s</string>
+    <string name="auto_save">Simpan otomatis</string>
+    <string name="changelog">Daftar perubahan</string>
+    <string name="codifica">Pengkodean</string>
+    <string name="condividi">Bagikan</string>
+    <string name="connection_name">Nama Sambungan</string>
+    <string name="delete_current_file">Hapus file ini</string>
+    <string name="enable_autoencoding">Pengkodean-Otomatis</string>
+    <string name="extra_options">Opsi ekstra</string>
+    <string name="file">File</string>
+    <string name="file_cannot_be_renamed">Nama file tidak dapat dirubah</string>
+    <string name="file_saved_with_success">File %1$s berhasil disimpan!</string>
+    <string name="find">Temukan</string>
+    <string name="folder">Folder</string>
+    <string name="font_size">Ukuran font</string>
+    <string name="goto_line">Pergi ke Baris</string>
+    <string name="goto_page">Pergi ke halaman…</string>
+    <string name="ignore_back_button">Abaikan tombol kembali</string>
+    <string name="info">Info</string>
+    <string name="is_the_working_folder">Ini adalah folder kerja</string>
+    <string name="keyboard_suggestions_and_swipe">Saran keyboard dan usapan</string>
+    <string name="light_theme">Tema Terang</string>
+    <string name="line_numbers">Nomor Baris</string>
+    <string name="long_click_for_more_options">Klik tahan untuk opsi lanjut</string>
+    <string name="match_case">Penyesuaian</string>
+    <string name="menu_syntax_highlight">Sorot sintaks</string>
+    <string name="new_file">File baru</string>
+    <string name="next">Lanjut</string>
+    <string name="no">Tidak</string>
+    <string name="nome_app_turbo_editor">Bluino Loader</string>
+    <string name="occurrences_found">%s kejadian ditemukan</string>
+    <string name="open">Buka</string>
+    <string name="open_a_file">Buka file</string>
+    <string name="please_wait">Harap tunggu sedang mengekstrak tools…</string>
+    <string name="preferenze">Preferensi</string>
+    <string name="previous">Sebelum</string>
+    <string name="read_only">Hanya baca</string>
+    <string name="recent_files">File baru-baru ini</string>
+    <string name="regular_expression">Ekspresi Reguler</string>
+    <string name="replace">Ganti</string>
+    <string name="replace_all">Ganti semua</string>
+    <string name="salva">Simpan</string>
+    <string name="save_as">Simpan sebagai</string>
+    <string name="save_changes">Apakah Anda ingin menyimpan perubahan pada file ini %s?</string>
+    <string name="send_error_reports">Kirim laporan kesalahan</string>
+    <string name="set_as_working_folder">Jadikan sebagai folder kerja</string>
+    <string name="share">Bagikan</string>
+    <string name="split_text_if_too_long">Membagi teks jika terlalu panjang</string>
+    <string name="testo_indietro">Batalkan</string>
+    <string name="testo_rifai">Ulangi</string>
+    <string name="text_to_find">Ketik untuk mencari</string>
+    <string name="text_to_replace">Ketik untuk mengganti</string>
+    <string name="theme">Theme</string>
+    <string name="theme_black">Black theme</string>
+    <string name="theme_dark">Dark theme</string>
+    <string name="translate_the_app">Terjemahkan</string>
+    <string name="use_monospace">Gunakan monospace</string>
+    <string name="use_storage_access_framework">Gunakan \"Storage Access Framework\"</string>
+    <string name="view_it_on_the_web">Lihat di web</string>
+    <string name="view_markdown_result">Lihat hasil markdown</string>
+    <string name="wrap_content">Rapatkan Konten</string>
+    <string name="about_action">Tentang</string>
+    <string name="about_message">Bluino Loader adalah aplikasi Arduino yang berjalan pada Android, dengan menggunakan aplikasi ini menjadi mudah dalam penulisan kode, menghasilkan file .hex dan mengunggahnya kedalam perangkat keras Bluino atau Arduino melalui Bluetooh/OTG. Untuk info lebih lanjut bisa ditemukan &lt;a href=http://www.bluino.com>disini&lt;/a>.&lt;br/> &lt;br/> Antarmuka aplikasi ini dibuat dengan pemograman Android oleh mansurkamsur berdasarkan Turbo Editor oleh Vlad Mihalachi.&lt;br/></string>
+    <string name="about_title">&lt;b>%1$s&lt;/b>&amp;nbsp;&lt;font color=#888888>v%2$s&lt;/font></string>
+    <string name="actByteStream_btn_send_desc">Tombol kirim</string>
+    <string name="actByteStream_input_hint">Ketik String yang akan dikirm</string>
+    <string name="bluetooth_not_available">Bluetooth tidak tersedia</string>
+    <string name="bluetooth_not_enabled">Bluetooth tidak dapat digunakan</string>
+    <string name="board_type">Board</string>
+    <string name="buy_text">BELI</string>
+    <string name="close">Tutup</string>
+    <string name="compiling_sketch">Mengkompilasi sketch…</string>
+    <string name="connection_failed">Koneksi gagal.</string>
+    <string name="description_canteen_intro1">"1. Nama File
+2. Upload Sketch
+3. Serial Monitor (Pro)
+4. Menu
+5. Jendela Editor
+6. Shortcut Karakter"</string>
+    <string name="description_canteen_intro2">Upload sketch ke semua jenis board Arduino melalui USB OTG atau Bluetooth</string>
+    <string name="description_canteen_intro3">Mendukung banyak USB driver: CDC/ACM, FTDI, PL2303, CH34X and CP210X</string>
+    <string name="description_canteen_intro4">Jadikan Arduino kamu wireless hanya dengan menggunakan modul bluetooth murah HC-05</string>
+    <string name="description_canteen_intro5">"Dapatkan Fitur lengkap:
+1. Bebas Iklan
+2. Pairing dengan semua nama Bluetooth
+3. Serial Monitor"</string>
+    <string name="description_canteen_intro6">"Arduino Language Reference: buku saku panduan untuk memahami pemrograman bahasa Arduino
+Arduino Tutorials - Examples: kumpulan tutorial belajar Arduino dengan 64 contoh"</string>
+    <string name="description_canteen_intro7">Mohon luangkan waktu untuk Rate aplikasi ini dan dukung untuk memperbaiki lebih banyak fitur baru ;)</string>
+    <string name="done_uploading">Berhasil mengunggah</string>
+    <string name="dropdown1">9600</string>
+    <string name="dropdown2">19200</string>
+    <string name="dropdown3">38400</string>
+    <string name="dropdown4">57600</string>
+    <string name="dropdown6">115200</string>
+    <string name="enable_btorotg">OTG &lt;—> Bluatooth</string>
+    <string name="error1">Tidak dapat menemukan folder</string>
+    <string name="error2">/BluinoLoader/</string>
+    <string name="error3">File Library</string>
+    <string name="error4">tidak tersedia.</string>
+    <string name="error_compiling">Error mengkompilasi kode.</string>
+    <string name="error_uploaded">Gagal mengunggah</string>
+    <string name="file_is_readonly">File ini adalah \"Read-Only\", perlu di save di lokasi berbeda.</string>
+    <string name="file_not_inopdehex">Ekstensi file bukan .ino or .pde or .hex</string>
+    <string name="hexfile_not_found">Fie .hex tidak ditemukan</string>
+    <string name="label_button_follow_tutorial">IKUTI TUTORIAL</string>
+    <string name="label_button_get_apps">GET APPS</string>
+    <string name="label_button_get_started">MULAI</string>
+    <string name="later_text">NANTI</string>
+    <string name="menu_baudrate">Baudrate</string>
+    <string name="menu_bluetooth">Koneksi</string>
+    <string name="menu_clear">Bersihkan</string>
+    <string name="menu_settings">Setelan</string>
+    <string name="msg_msg_bt_connect_lost">Komunikasi bluetooth putus, coba lagi untuk terhubung</string>
+    <string name="no_bluino_found">Tidak ditemukan perangkat Bluino</string>
+    <string name="no_bluino_hardware_paired">Perangkat Bluino tidak terdaftar</string>
+    <string name="no_devices_found">Tidak ditemukan perangkat bluetooth</string>
+    <string name="no_devices_paired">Tidak ada perangkat terdaftar</string>
+    <string name="no_usb_connected">Tidak ada USB yang terhubung</string>
+    <string name="not_connect">Tidak terhubung</string>
+    <string name="note_baudrate">Baudrate pada sketch harus sesuai dengan HC05 (57600/115200)</string>
+    <string name="ok_button">OK</string>
+    <string name="permission_coarse_location_rationale">Coarse location permission is needed to read storage.</string>
+    <string name="permission_read_storage_rationale">Read storage permission is needed to read storage.</string>
+    <string name="permission_write_storage_rationale">Write storage permission is needed to write storage.</string>
+    <string name="please_restart">Silahkan restart Aplikasi, Terima kasih…</string>
+    <string name="purchase_not_available">In-app billing service is unavailable, please upgrade Android Market/Play to version >= 3.9.16</string>
+    <string name="rate_text">RATE</string>
+    <string name="scan_bluino_hardware">Scan perangkat Bluino</string>
+    <string name="scan_for_devices">Scan Bluetooth</string>
+    <string name="scanning_for_bluino">Mencari perangkat Bluino…</string>
+    <string name="scanning_for_devices">Mencari perangkat bluetooth…</string>
+    <string name="select_a_bluino_to_connect">Pilih perangkat Bluino</string>
+    <string name="select_a_devices_to_connect">Pilih perangkat bluetooth</string>
+    <string name="serial_monitor">Serial monitor</string>
+    <string name="serial_monitor_connected">Serial Monitor Terhubung melalui USB</string>
+    <string name="serialmonitor_btn_send_desc">Tombol Kirim</string>
+    <string name="support_development">Menjadi Versi Pro</string>
+    <string name="support_development_content">"Bluino Loader merupakan aplikasi gratis, dengan membeli beberapa fitur tambahan kamu akan mengaktifkan fitur tambahan: Bebas Iklan, Pairing dengan semua nama Bluetooth &amp; Serial monitor.
+"</string>
+    <string name="title_canteen_intro1">Antarmuka Sederhana</string>
+    <string name="title_canteen_intro2">Pilih jenis Board Arduino</string>
+    <string name="title_canteen_intro3">Upload sketch melalui USB OTG</string>
+    <string name="title_canteen_intro4">Upload sketch melalui Bluetooth</string>
+    <string name="title_canteen_intro5">Menjadi Versi Pro</string>
+    <string name="title_canteen_intro6">Dapatkan Aplikasi yang lain</string>
+    <string name="title_canteen_intro7">Terima Kasih</string>
+    <string name="to_arduino_text">ke Arduino</string>
+    <string name="to_text">ke</string>
+    <string name="txt_close">TUTUP</string>
+    <string name="upload2">Unggah</string>
+    <string name="uploading_progress">Mengunggah…</string>
+    <string name="usb_connect">Terhubung</string>
+    <string name="usb_device_not_support">Perangkat USB tidak didukung</string>
+    <string name="usb_disconnected">USB terputus</string>
+    <string name="usb_not_connect">Tidak Terhubung</string>
+    <string name="usb_permission_not_granted">Izin USB tidak diberikan</string>
+    <string name="yes_text">YA!</string>
+    <string name="scan_device_hardware">Scan perangkat bluetooth</string>
+</resources>

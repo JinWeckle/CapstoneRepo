@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ff212121" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:id="@id/actByteStreamUsb_rl_send_area" android:background="#ff212121" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_alignParentBottom="true">
+        <ImageButton android:id="@id/actByteStreamUsb_btn_send" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@android:drawable/ic_menu_send" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:onClick="onClickBtnSend" android:contentDescription="@string/actByteStream_btn_send_desc" />
+        <AutoCompleteTextView android:textSize="15.0sp" android:textColor="#ffd2d2d2" android:id="@id/actByteStreamUsb_actv_input" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/actByteStream_input_hint" android:maxLines="3" android:completionThreshold="2" android:layout_toLeftOf="@id/actByteStreamUsb_btn_send" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" android:textCursorDrawable="@drawable/color_cursor">
+            <requestFocus />
+        </AutoCompleteTextView>
+    </RelativeLayout>
+    <ScrollView android:id="@id/actByteStreamUsb_sv_Scroll" android:background="#ff212121" android:scrollbars="vertical" android:fadingEdge="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/actByteStreamUsb_rl_send_area" android:layout_below="@id/actByteStreamUsb_status" android:layout_alignParentLeft="true" android:layout_alignParentStart="true">
+        <TextView android:textSize="13.0sp" android:typeface="monospace" android:textColor="#ffd2d2d2" android:id="@id/actByteStreamUsb_tv_receive" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="false" />
+    </ScrollView>
+    <TextView android:id="@id/actByteStreamUsb_status" android:background="@color/file_html" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="53.0dip" android:text="Driver: CDC/ACM, Baudrate: 9600" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentStart="true" />
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center" android:orientation="vertical" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:textSize="12.0sp" android:id="@id/text_to_find" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="56.0dip" android:hint="@string/text_to_find" android:inputType="textFilter|textNoSuggestions" />
+    <CheckBox android:textSize="12.0sp" android:id="@id/regex_check" android:layout_width="fill_parent" android:layout_height="56.0dip" android:text="@string/regular_expression" android:singleLine="true" android:layout_weight="1.0" android:textAllCaps="true" />
+    <CheckBox android:textSize="12.0sp" android:id="@id/match_case_check" android:layout_width="fill_parent" android:layout_height="56.0dip" android:text="@string/match_case" android:singleLine="true" android:layout_weight="1.0" android:textAllCaps="true" />
+    <CheckBox android:textSize="12.0sp" android:id="@id/replace_check" android:layout_width="fill_parent" android:layout_height="56.0dip" android:text="@string/replace" android:singleLine="true" android:layout_weight="1.0" android:textAllCaps="true" />
+    <EditText android:textSize="12.0sp" android:id="@id/text_to_replace" android:padding="5.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="56.0dip" android:hint="@string/text_to_replace" android:inputType="textFilter|textNoSuggestions" />
+</LinearLayout>

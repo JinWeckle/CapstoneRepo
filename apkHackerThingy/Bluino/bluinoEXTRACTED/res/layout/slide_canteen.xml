@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.heinrichreimersoftware.materialintro.view.parallax.ParallaxLinearLayout android:gravity="center" android:orientation="vertical" android:tag="layout/slide_canteen_0" android:padding="@dimen/mi_baseline" android:fitsSystemWindows="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:gravity="center" android:id="@id/mi_image" android:paddingLeft="?actionBarSize" android:paddingRight="?actionBarSize" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/mi_baseline" android:adjustViewBounds="true" />
+    <TextView android:textAppearance="@style/TextAppearance.AppCompat.Headline" android:gravity="center" android:id="@id/mi_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/mi_baseline" app:layout_parallaxFactor="0.5" />
+    <TextView android:textAppearance="@style/TextAppearance.AppCompat.Subhead" android:textSize="15.0sp" android:gravity="center" android:id="@id/mi_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/mi_baseline" app:layout_parallaxFactor="0.8" />
+</com.heinrichreimersoftware.materialintro.view.parallax.ParallaxLinearLayout>

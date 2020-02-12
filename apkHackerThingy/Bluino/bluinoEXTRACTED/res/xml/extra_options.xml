@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:title="@string/light_theme" android:key="light_theme" android:defaultValue="true" />
+    <CheckBoxPreference android:title="@string/keyboard_suggestions_and_swipe" android:key="suggestion_active" android:defaultValue="false" />
+    <CheckBoxPreference android:title="@string/auto_save" android:key="auto_save" android:defaultValue="false" />
+    <CheckBoxPreference android:title="@string/enable_autoencoding" android:key="autoencoding" android:defaultValue="true" />
+    <ListPreference android:entries="@array/encodings" android:title="@string/codifica" android:key="editor_encoding" android:defaultValue="UTF-8" android:positiveButtonText="@null" android:negativeButtonText="@null" android:entryValues="@array/encodings" />
+    <CheckBoxPreference android:title="@string/ignore_back_button" android:key="ignore_back_button" android:defaultValue="false" />
+    <CheckBoxPreference android:title="@string/split_text_if_too_long" android:key="page_system_active" android:defaultValue="true" />
+    <CheckBoxPreference android:title="@string/send_error_reports" android:key="send_error_reports" android:defaultValue="true" />
+</PreferenceScreen>
