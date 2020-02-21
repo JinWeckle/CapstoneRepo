@@ -15,6 +15,7 @@ byte LEDpin = 53;
  
 void setup() 
 {
+    Serial.print("Slave");
     Serial.begin(9600);
     Serial.print("Sketch:   ");   Serial.println(__FILE__);
     Serial.print("Uploaded: ");   Serial.println(__DATE__);

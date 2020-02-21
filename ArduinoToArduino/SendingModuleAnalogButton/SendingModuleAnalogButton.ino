@@ -15,8 +15,8 @@ AltSoftSerial BTSerial;
  
 boolean pressed = false;
 
-const int buttonHigh =  50;
-const int buttonLow =  51;
+const int buttonHigh =  A0;
+const int buttonLow =  A11;
  
 void setup() 
 {
@@ -51,11 +51,12 @@ void setup()
  
 void loop()
 { 
-  if(digitalRead(buttonHigh) == HIGH && digitalRead(buttonLow) == LOW)
+  Serial.println(analogRead(buttonHigh));
+  if(analogRead(buttonHigh) > 855)
   {
     pressed = true;
   }
-  if(digitalRead(buttonLow) == HIGH && digitalRead(buttonHigh) == LOW)
+  if(analogRead(buttonLow) > 855)
   {
     pressed = false;
   }
