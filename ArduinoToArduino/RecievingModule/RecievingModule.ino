@@ -45,7 +45,6 @@ void loop()
     if (BTSerial.available())
     {
         c = BTSerial.read();
- 
         // 49 is the ascii code for "1"
         // 48 is the ascii code for "0"
         if (c==49)   { digitalWrite(LEDpin,HIGH);   }

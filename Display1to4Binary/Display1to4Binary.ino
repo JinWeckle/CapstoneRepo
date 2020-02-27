@@ -42,7 +42,7 @@ void setup()
 
   BTserial.begin(9600);
   Serial.println("BTserial started at 9600");
-
+  pinReset();
 }
 
 void pinReset()
@@ -65,9 +65,9 @@ void loop()
     // 49 is the ascii code for "1"
     // 48 is the ascii code for "0"
 
-    if (c == 0)
+    //if (c == 0)
     {
-      pinReset();
+      //pinReset();
     }
     if (c == 1)
     {
@@ -100,6 +100,10 @@ void loop()
       digitalWrite(ledPin1, LOW);
       digitalWrite(ledPin2, HIGH);
       digitalWrite(ledPin3, LOW);
+    }
+    if(c == 5)
+    {
+      pinReset();
     }
 
     //if(c==0x68656c6c6f)
