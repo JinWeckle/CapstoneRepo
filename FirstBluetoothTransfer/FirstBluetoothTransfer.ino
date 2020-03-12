@@ -30,33 +30,36 @@
 */
 
 //Fastled version 3.2.3 imports
-#include <bitswap.h>
-#include <chipsets.h>
-#include <color.h>
-#include <colorpalettes.h>
-#include <colorutils.h>
-#include <controller.h>
-#include <cpp_compat.h>
-#include <dmx.h>
+#define FASTLED_INTERNAL
 #include <FastLED.h>
 #include <fastled_config.h>
 #include <fastled_delay.h>
 #include <fastled_progmem.h>
-#include <fastpin.h>
-#include <fastspi.h>
-#include <fastspi_bitbang.h>
-#include <fastspi_dma.h>
-#include <fastspi_nop.h>
-#include <fastspi_ref.h>
-#include <fastspi_types.h>
-#include <hsv2rgb.h>
-#include <led_sysdefs.h>
-#include <lib8tion.h>
-#include <noise.h>
-#include <pixelset.h>
-#include <pixeltypes.h>
-#include <platforms.h>
-#include <power_mgt.h>
+#include <bitswap.h>
+
+//UNUSED LIBRARIES
+//#include <chipsets.h>
+//#include <color.h>
+//#include <colorpalettes.h>
+//#include <colorutils.h>
+//#include <controller.h>
+//#include <cpp_compat.h>
+//#include <dmx.h>
+//#include <fastpin.h>
+//#include <fastspi.h>
+//#include <fastspi_bitbang.h>
+//#include <fastspi_dma.h>
+//#include <fastspi_nop.h>
+//#include <fastspi_ref.h>
+//#include <fastspi_types.h>
+//#include <hsv2rgb.h>
+//#include <led_sysdefs.h>
+//#include <lib8tion.h>
+//#include <noise.h>
+//#include <pixelset.h>
+//#include <pixeltypes.h>
+//#include <platforms.h>
+//#include <power_mgt.h>
 
 #include <AltSoftSerial.h>
 AltSoftSerial BTSerial;
@@ -713,28 +716,20 @@ void setup() {
   /////////////////////////////////////////////////////////////
   /////////////////////////////////////////////////////////////
   Serial.begin(9600);
-  //Serial.print("Sketch:   ");   Serial.println(__FILE__);
-  //Serial.print("Uploaded: ");   Serial.println(__DATE__);
-  //Serial.println(" ");
-
   BTSerial.begin(9600);
-  Serial.println("BTSerial started at 9600");
-  Serial.println(" ");
+  Serial.println(F("BTSerial started at 9600"));
   delay(500);
 
-  BTSerial.print("AT+RESET" );
-  Serial.print("AT+RESET (WIPING MODULE)");
-  Serial.println(" ");
+  BTSerial.print("AT+RESET");
+  Serial.println(F("AT+RESET (WIPING MODULE)"));
   delay(500);
 
-  BTSerial.print("AT+IMME0" );
-  Serial.print("AT+IMME0 (SETTING AUTOCONNECT)" );
-  Serial.println(" ");
+  BTSerial.print("AT+IMME0");
+  Serial.println(F("AT+IMME0 (SETTING AUTOCONNECT)"));
   delay(500);
 
   BTSerial.print("AT+ROLE0" );
-  Serial.print("AT+ROLE0 (SETTING CLIENT)" );
-  Serial.println(" ");
+  Serial.println(F("AT+ROLE0 (SETTING CLIENT)"));
   delay(500);
 }
 
@@ -748,29 +743,10 @@ void loop() {
 
     String tempStr;
     tempStr += c;
-
-    //int len = strlen(WORD);
-    //Serial.println(len);
     tempStr += WORD[index];
-    //tempStr.toCharArray(WORD[index], 95);
-    Serial.println(WORD);
-
-    //Serial.println(index);
+    //Serial.println(WORD);
     index++;
-
-    /*
-      //len = strlen(tempStr);
-      for (int i = 0; i < len; i++)
-      {
-      WORD[i] = tempStr[i];
-      }
-    */
-
-    // 49 is the ascii code for "1"
-    // 48 is the ascii code for "0"
-    //if (c==49)   { digitalWrite(LEDpin,HIGH);   }
-    //if (c==48)   { digitalWrite(LEDpin,LOW);    }
-    //Serial.print(WORD);
+    
     delay(50);
     //resetFunc();
   }
@@ -782,7 +758,6 @@ void loop() {
      Detects each character and calls corresponding function
      Draws character 1 based off "left", subtracts the length of character 1 from "left", draws character 2 off new point, repeat for each letter
   */
-  //Serial.print("running main");
 
   for (int i = 0; i < sizeof WORD; i++) {
     if (WORD[i] == 'a' || WORD[i] == 'A') {
