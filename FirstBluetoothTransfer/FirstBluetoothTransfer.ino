@@ -62,6 +62,7 @@
 AltSoftSerial BTSerial;
 char c = ' ';
 
+
 //Desired output pins on Arduino Mega 2560
 #define LED_PIN0  49 //Wire #1    TOP
 #define LED_PIN1  44 //Wire #2
@@ -94,8 +95,9 @@ char c = ' ';
    Only recognizes characters [A-Z],[0-9], ?, !, :, .
 */
 
-char WORD[] = "Welcome to the MVHS Library!";
+//char WORD[] = "Welcome to the MVHS Library!";
 //char WORD[] = "Mr Jones Class";
+char WORD[95];
 
 /*
    When finished, click the arrow pointing to the right at the top of the page to upload to running board
@@ -681,6 +683,7 @@ int TOP_LEFT = 0;
 
 void setup() {
   //LED light setup for each pin
+
   FastLED.addLeds<WS2812, LED_PIN0>(ledsRow0, NUM_LEDS);
   FastLED.addLeds<WS2812, LED_PIN1>(ledsRow1, NUM_LEDS);
   FastLED.addLeds<WS2812, LED_PIN2>(ledsRow2, NUM_LEDS);
@@ -691,7 +694,7 @@ void setup() {
   FastLED.addLeds<WS2812, LED_PIN7>(ledsRow7, NUM_LEDS);
   FastLED.addLeds<WS2812, LED_PIN8>(ledsRow8, NUM_LEDS);
   FastLED.addLeds<WS2812, LED_PIN9>(ledsRow9, NUM_LEDS);
-  FastLED.setBrightness(50);
+  FastLED.setBrightness(50); //0 to 255 (255 is brightest, but you cannot see the LEDs below about 25)
   //LED light setup for each LED
   //NOTE: Parameters are GRB (Green, Red, Blue) NOT RGB (Red, Green, Blue)
   for ( int i = 0; i < NUM_LEDS; i++) {
@@ -709,44 +712,67 @@ void setup() {
 
   /////////////////////////////////////////////////////////////
   /////////////////////////////////////////////////////////////
-  Serial.print("Slave");
   Serial.begin(9600);
-  Serial.print("Sketch:   ");   Serial.println(__FILE__);
-  Serial.print("Uploaded: ");   Serial.println(__DATE__);
-  Serial.println(" ");
+  //Serial.print("Sketch:   ");   Serial.println(__FILE__);
+  //Serial.print("Uploaded: ");   Serial.println(__DATE__);
+  //Serial.println(" ");
 
   BTSerial.begin(9600);
   Serial.println("BTSerial started at 9600");
   Serial.println(" ");
+  delay(500);
 
   BTSerial.print("AT+RESET" );
-  Serial.print("AT+RESET");
+  Serial.print("AT+RESET (WIPING MODULE)");
   Serial.println(" ");
-  delay(1000);
-  
+  delay(500);
+
   BTSerial.print("AT+IMME0" );
-  Serial.print("AT+IMME0" );
+  Serial.print("AT+IMME0 (SETTING AUTOCONNECT)" );
   Serial.println(" ");
-  delay(1000);
-  
+  delay(500);
+
   BTSerial.print("AT+ROLE0" );
-  Serial.print("AT+ROLE0" );
+  Serial.print("AT+ROLE0 (SETTING CLIENT)" );
   Serial.println(" ");
-  //pinMode(LEDpin, OUTPUT);
-  //digitalWrite(LEDpin,LOW);
+  delay(500);
 }
+
+void(* resetFunc) (void) = 0; //Method for resetting the Arduino (just call resetFunc(); )
 
 void loop() {
   if (BTSerial.available())
   {
-    //String str(WORD[ ]);
+    int index = 0;
     c = BTSerial.read();
-    Serial.print(c);
+
+    String tempStr;
+    tempStr += c;
+
+    //int len = strlen(WORD);
+    //Serial.println(len);
+    tempStr += WORD[index];
+    //tempStr.toCharArray(WORD[index], 95);
+    Serial.println(WORD);
+
+    //Serial.println(index);
+    index++;
+
+    /*
+      //len = strlen(tempStr);
+      for (int i = 0; i < len; i++)
+      {
+      WORD[i] = tempStr[i];
+      }
+    */
+
     // 49 is the ascii code for "1"
     // 48 is the ascii code for "0"
     //if (c==49)   { digitalWrite(LEDpin,HIGH);   }
     //if (c==48)   { digitalWrite(LEDpin,LOW);    }
-    //Serial.println(WORD[]);
+    //Serial.print(WORD);
+    delay(50);
+    //resetFunc();
   }
   //Holds temporary position of TOP_LEFT
   int left = TOP_LEFT;
@@ -756,7 +782,8 @@ void loop() {
      Detects each character and calls corresponding function
      Draws character 1 based off "left", subtracts the length of character 1 from "left", draws character 2 off new point, repeat for each letter
   */
-  
+  //Serial.print("running main");
+
   for (int i = 0; i < sizeof WORD; i++) {
     if (WORD[i] == 'a' || WORD[i] == 'A') {
       left = cycleLetters6(letterA, left);
