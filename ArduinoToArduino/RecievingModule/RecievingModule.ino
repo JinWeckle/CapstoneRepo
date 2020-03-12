@@ -1,4 +1,4 @@
-// HM-10_Example_01_simpleLED_Peripheral
+/ HM-10_Example_01_simpleLED_Peripheral
 //
 //  Pins
 //  BT VCC to Arduino 5V out. 
