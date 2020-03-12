@@ -1,61 +1,69 @@
+
 /*
- * If wanting to edit displayed message, navigate to section labeled client control below
- *
- * Created by:
- *  Tyler Nelson
- *  Nick Weiser
- *  Harrison Shirley
- *  Luis Bariuan
- *  2019
- *
- * Wireless Implentation Created by:
- *  Noah Silva
- *  Jin Weckle
- *  Lochlin Craig
- *  2020
- *
- * INITIAL SETUP:
- *  1. Download FastLED library from github   https://github.com/FastLED/FastLED
- *  2. Import library                         Sketch>Include Library>Add .ZIP Library
- *  3. Change FastLED version to 3.2.3        Sketch>Include Library>Manage Libraries...>Search "FastLED">Version 3.2.3>Install
- *  4. Edit Board                             Tools>Board>Arduino/Genuino Mega or Mega 2560
- *  5. Edit Port                              Tools>Port>Select Port (Typically COM 3, should have board name next to port)
- *
- *  WIRING:
- *    Each LEDstrip needs to have :
- *     Ground(black) wire going to the arduino board as well as to the wall source
- *     Voltage(red) wire going to arduino 5V input and one going to wall source
- *     Data(green) wire going to preset arduino input(see defined LED_PINs below)
- */
+   If wanting to edit displayed message, navigate to section labeled client control below
+
+   Created by:
+    Tyler Nelson
+    Nick Weiser
+    Harrison Shirley
+    Luis Bariuan
+    2019
+
+   Wireless Implentation Created by:
+    Noah Silva
+    Jin Weckle
+    Lochlin Craig
+    2020
+
+   INITIAL SETUP:
+    1. Download FastLED library from github   https://github.com/FastLED/FastLED
+    2. Import library                         Sketch>Include Library>Add .ZIP Library
+    3. Change FastLED version to 3.2.3        Sketch>Include Library>Manage Libraries...>Search "FastLED">Version 3.2.3>Install
+    4. Edit Board                             Tools>Board>Arduino/Genuino Mega or Mega 2560
+    5. Edit Port                              Tools>Port>Select Port (Typically COM 3, should have board name next to port)
+
+    WIRING:
+      Each LEDstrip needs to have :
+       Ground(black) wire going to the arduino board as well as to the wall source
+       Voltage(red) wire going to arduino 5V input and one going to wall source
+       Data(green) wire going to preset arduino input(see defined LED_PINs below)
+*/
 
 //Fastled version 3.2.3 imports
-#include <bitswap.h>
-#include <chipsets.h>
-#include <color.h>
-#include <colorpalettes.h>
-#include <colorutils.h>
-#include <controller.h>
-#include <cpp_compat.h>
-#include <dmx.h>
+#define FASTLED_INTERNAL
 #include <FastLED.h>
 #include <fastled_config.h>
 #include <fastled_delay.h>
 #include <fastled_progmem.h>
-#include <fastpin.h>
-#include <fastspi.h>
-#include <fastspi_bitbang.h>
-#include <fastspi_dma.h>
-#include <fastspi_nop.h>
-#include <fastspi_ref.h>
-#include <fastspi_types.h>
-#include <hsv2rgb.h>
-#include <led_sysdefs.h>
-#include <lib8tion.h>
-#include <noise.h>
-#include <pixelset.h>
-#include <pixeltypes.h>
-#include <platforms.h>
-#include <power_mgt.h>
+#include <bitswap.h>
+
+//UNUSED LIBRARIES
+//#include <chipsets.h>
+//#include <color.h>
+//#include <colorpalettes.h>
+//#include <colorutils.h>
+//#include <controller.h>
+//#include <cpp_compat.h>
+//#include <dmx.h>
+//#include <fastpin.h>
+//#include <fastspi.h>
+//#include <fastspi_bitbang.h>
+//#include <fastspi_dma.h>
+//#include <fastspi_nop.h>
+//#include <fastspi_ref.h>
+//#include <fastspi_types.h>
+//#include <hsv2rgb.h>
+//#include <led_sysdefs.h>
+//#include <lib8tion.h>
+//#include <noise.h>
+//#include <pixelset.h>
+//#include <pixeltypes.h>
+//#include <platforms.h>
+//#include <power_mgt.h>
+
+#include <AltSoftSerial.h>
+AltSoftSerial BTSerial;
+char c = ' ';
 
 
 //Desired output pins on Arduino Mega 2560
@@ -83,27 +91,27 @@
 
 
 /*
- * Insert desired message between quotations *KEEP QUOTATIONS AND SEMI-COLON AT END!*
- * Ex:
- * char WORD[] = "Insert message here";
- *
- * Only recognizes characters [A-Z],[0-9], ?, !, :, .
- */
+   Insert desired message between quotations *KEEP QUOTATIONS AND SEMI-COLON AT END!
+   Ex:
+   char WORD[] = "Insert message here";
 
+   Only recognizes characters [A-Z],[0-9], ?, !, :, .
+*/
 
 //char WORD[] = "Welcome to the MVHS Library!";
-char WORD[] = "Mr Jones Class";
+//char WORD[] = "Mr Jones Class";
+char WORD[95];
 
 /*
- * When finished, click the arrow pointing to the right at the top of the page to upload to running board
- *
- * NOTE: If the project says "Error Compiling:"
- *  1. Make sure the board and computer is securely connected
- *  2. Make sure Board is selected as "Arduino/Genuino Mega or Mega 2560" Tools>Board
- *  3. Make sure port corresponds with usb port being used. Typically COM 3 (Should probably have board name next to COM in list) Tools>Port
- *  4. If steps 1-3 don't work, try adding a space/spaces to the front and/or end to your message and try uploading again
- *    - char WORD[] = "   Insert message here    ";
- *  5. Seek help from computer science students or teacher */
+   When finished, click the arrow pointing to the right at the top of the page to upload to running board
+
+   NOTE: If the project says "Error Compiling:"
+    1. Make sure the board and computer is securely connected
+    2. Make sure Board is selected as "Arduino/Genuino Mega or Mega 2560" Tools>Board
+    3. Make sure port corresponds with usb port being used. Typically COM 3 (Should probably have board name next to COM in list) Tools>Port
+    4. If steps 1-3 don't work, try adding a space/spaces to the front and/or end to your message and try uploading again
+      - char WORD[] = "   Insert message here    ";
+    5. Seek help from computer science students or teacher */
 
 
 
@@ -141,19 +149,19 @@ CRGB ledsRow7[NUM_LEDS];
 CRGB ledsRow8[NUM_LEDS];
 CRGB ledsRow9[NUM_LEDS];
 
- /*
-  * Creates 2D array to represent each character
-  * A '1' represents that light being on, '0' represents it being off
-  * byte letterA[][6] : The six represents the number of columns used in creating a character
-  * Currently only characters of length 5, 6, 7 are valid. Future change?
-  * Recommended column of 0's at the front and back of each character to create character spacing
-  */
+/*
+   Creates 2D array to represent each character
+   A '1' represents that light being on, '0' represents it being off
+   byte letterA[][6] : The six represents the number of columns used in creating a character
+   Currently only characters of length 5, 6, 7 are valid. Future change?
+   Recommended column of 0's at the front and back of each character to create character spacing
+*/
 
-  /*
-   * CREATING NEW CHARACTER:
-   *  1. Create 2D array as seen below with 1's representing an on light and 0's representing off
-   *  2. Add to if statement in loop that checks for the character and calls corresponding method based off array length
-   */
+/*
+   CREATING NEW CHARACTER:
+    1. Create 2D array as seen below with 1's representing an on light and 0's representing off
+    2. Add to if statement in loop that checks for the character and calls corresponding method based off array length
+*/
 byte letterA[][6] = {
   {0, 0, 1, 1, 0, 0},
   {0, 1, 0, 0, 1, 0},
@@ -670,14 +678,15 @@ byte letterColon[10][5] = {
 };
 
 /*
- * Holds the position of the "top left corner" of the word. (If you drew a square around the word it would be the top left corner!)
- * This is what controls the movement of the message. Message is drawn behind this point. As the point moves forward, the message will follow
- */
+   Holds the position of the "top left corner" of the word. (If you drew a square around the word it would be the top left corner!)
+   This is what controls the movement of the message. Message is drawn behind this point. As the point moves forward, the message will follow
+*/
 int TOP_LEFT = 0;
 
 
 void setup() {
   //LED light setup for each pin
+
   FastLED.addLeds<WS2812, LED_PIN0>(ledsRow0, NUM_LEDS);
   FastLED.addLeds<WS2812, LED_PIN1>(ledsRow1, NUM_LEDS);
   FastLED.addLeds<WS2812, LED_PIN2>(ledsRow2, NUM_LEDS);
@@ -688,7 +697,7 @@ void setup() {
   FastLED.addLeds<WS2812, LED_PIN7>(ledsRow7, NUM_LEDS);
   FastLED.addLeds<WS2812, LED_PIN8>(ledsRow8, NUM_LEDS);
   FastLED.addLeds<WS2812, LED_PIN9>(ledsRow9, NUM_LEDS);
-
+  FastLED.setBrightness(50); //0 to 255 (255 is brightest, but you cannot see the LEDs below about 25)
   //LED light setup for each LED
   //NOTE: Parameters are GRB (Green, Red, Blue) NOT RGB (Red, Green, Blue)
   for ( int i = 0; i < NUM_LEDS; i++) {
@@ -703,17 +712,53 @@ void setup() {
     ledsRow8[i] = CRGB (bgrdGreen, bgrdRed, bgrdBlue);
     ledsRow9[i] = CRGB (bgrdGreen, bgrdRed, bgrdBlue);
   }
+
+  /////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////
+  Serial.begin(9600);
+  BTSerial.begin(9600);
+  Serial.println(F("BTSerial started at 9600"));
+  delay(500);
+
+  BTSerial.print("AT+RESET");
+  Serial.println(F("AT+RESET (WIPING MODULE)"));
+  delay(500);
+
+  BTSerial.print("AT+IMME0");
+  Serial.println(F("AT+IMME0 (SETTING AUTOCONNECT)"));
+  delay(500);
+
+  BTSerial.print("AT+ROLE0" );
+  Serial.println(F("AT+ROLE0 (SETTING CLIENT)"));
+  delay(500);
 }
 
+void(* resetFunc) (void) = 0; //Method for resetting the Arduino (just call resetFunc(); )
+
 void loop() {
+  if (BTSerial.available())
+  {
+    int index = 0;
+    c = BTSerial.read();
+
+    String tempStr;
+    tempStr += c;
+    tempStr += WORD[index];
+    //Serial.println(WORD);
+    index++;
+    
+    delay(50);
+    //resetFunc();
+  }
   //Holds temporary position of TOP_LEFT
   int left = TOP_LEFT;
 
   /*
-   * Cycles through desired message
-   * Detects each character and calls corresponding function
-   * Draws character 1 based off "left", subtracts the length of character 1 from "left", draws character 2 off new point, repeat for each letter
-   */
+     Cycles through desired message
+     Detects each character and calls corresponding function
+     Draws character 1 based off "left", subtracts the length of character 1 from "left", draws character 2 off new point, repeat for each letter
+  */
+
   for (int i = 0; i < sizeof WORD; i++) {
     if (WORD[i] == 'a' || WORD[i] == 'A') {
       left = cycleLetters6(letterA, left);
@@ -806,7 +851,7 @@ void loop() {
   }
 
   //Cycles through colors
-  
+
   if (typeRed > 0 && typeBlue == 0) {
     typeRed--;
     typeGreen++;
@@ -817,26 +862,26 @@ void loop() {
     typeBlue--;
     typeRed++;
   }
-  
+
   //Tells FastLED to update which lights are on/off
   FastLED.show();
 
   //Time between each shift of the lights down the strip (measured in ms)
-  delay(20);
+  delay(50);
 
   //Moves the TOP_LEFT down one position on the strip then repeats the process
   TOP_LEFT++;
 }
 
 /*
- * Following functions serve the same purpose
- * The reason there is three of them is to compensate for the three different lengths of characters
- * C/C++ requires that 2D arrays being passed into a function have a preset number of columns
- * Could be a future improvement so any length of character is allowed (Perhaps flipping the 2D arrays?)
- *
- * Cycles through the 2D array of the letter passed in
- * If it finds a 1, it sets the corresponding light to be lit, if 0, turns corresponding light off
- */
+   Following functions serve the same purpose
+   The reason there is three of them is to compensate for the three different lengths of characters
+   C/C++ requires that 2D arrays being passed into a function have a preset number of columns
+   Could be a future improvement so any length of character is allowed (Perhaps flipping the 2D arrays?)
+
+   Cycles through the 2D array of the letter passed in
+   If it finds a 1, it sets the corresponding light to be lit, if 0, turns corresponding light off
+*/
 int cycleLetters5(byte letter[][5], int left) {
   for ( int i = 0; i < sizeof letter[0] / sizeof( byte); i++) {
 

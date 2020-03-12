@@ -21,7 +21,6 @@ boolean NL = true;
 const int ledPin0 =  47;
 void setup() 
 {
-  
     pinMode(ledPin0, OUTPUT);
     
     Serial.begin(9600);

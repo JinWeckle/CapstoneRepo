@@ -13,16 +13,13 @@
 #include <AltSoftSerial.h>
 AltSoftSerial BTSerial; 
  
-boolean pressed = false;
-
-const int buttonHigh =  50;
-const int buttonLow =  51;
+boolean high = false;
+const int potent = A11;
  
 void setup() 
 {
-    pinMode(buttonHigh, INPUT);
-    pinMode(buttonLow, INPUT);
-
+    pinMode(potent, INPUT);
+    
     
     Serial.begin(9600);
     Serial.print("Sketch:   ");   Serial.println(__FILE__);
@@ -41,30 +38,38 @@ void setup()
     Serial.print("AT+IMME1" );
     delay(1000);    
     BTSerial.print("AT+ROLE1" );
-    //Serial.print("AT+ROLE1" );
+    Serial.print("AT+ROLE1" );
     delay(1000);
     BTSerial.print("AT+CON78DB2F140822" ); //Slave's MAC ADDR
     Serial.print("AT+CON78DB2F140822" );
     delay(500);
- 
 }
  
 void loop()
 { 
-  if(digitalRead(buttonHigh) == HIGH && digitalRead(buttonLow) == LOW)
+  // read the input on analog pin 0:
+  int sensorValue = analogRead(A11);
+  // Convert the analog reading (which goes from 0 - 1023) to a voltage (0 - 5V):
+  float potent = sensorValue * (5.0 / 1023.0);
+  // print out the value you read:
+  //Serial.println(voltage);
+  
+  if(potent > 4.9)
   {
-    pressed = true;
+    high = true;
   }
-  if(digitalRead(buttonLow) == HIGH && digitalRead(buttonHigh) == LOW)
+  else
   {
-    pressed = false;
+    high = false;
   }
-  if(pressed)
+  if(high)
   {
+    //Serial.println("1");
     BTSerial.print("1");
   }
   else
   {
+    //Serial.println("0");
     BTSerial.print("0");
   }
     
