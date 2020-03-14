@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="abc_action_bar_home_description">Navigate home</string>
+    <string name="abc_action_bar_up_description">Navigate up</string>
+    <string name="abc_action_menu_overflow_description">More options</string>
+    <string name="abc_action_mode_done">Done</string>
+    <string name="abc_activity_chooser_view_see_all">See all</string>
+    <string name="abc_activitychooserview_choose_application">Choose an app</string>
+    <string name="abc_capital_off">OFF</string>
+    <string name="abc_capital_on">ON</string>
+    <string name="abc_menu_alt_shortcut_label">Alt+</string>
+    <string name="abc_menu_ctrl_shortcut_label">Ctrl+</string>
+    <string name="abc_menu_delete_shortcut_label">delete</string>
+    <string name="abc_menu_enter_shortcut_label">enter</string>
+    <string name="abc_menu_function_shortcut_label">Function+</string>
+    <string name="abc_menu_meta_shortcut_label">Meta+</string>
+    <string name="abc_menu_shift_shortcut_label">Shift+</string>
+    <string name="abc_menu_space_shortcut_label">space</string>
+    <string name="abc_menu_sym_shortcut_label">Sym+</string>
+    <string name="abc_prepend_shortcut_label">Menu+</string>
+    <string name="abc_search_hint">Search…</string>
+    <string name="abc_searchview_description_clear">Clear query</string>
+    <string name="abc_searchview_description_query">Search query</string>
+    <string name="abc_searchview_description_search">Search</string>
+    <string name="abc_searchview_description_submit">Submit query</string>
+    <string name="abc_searchview_description_voice">Voice search</string>
+    <string name="abc_shareactionprovider_share_with">Share with</string>
+    <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
+    <string name="abc_toolbar_collapse_description">Collapse</string>
+    <string name="about_activity_title">About Us</string>
+    <string name="about_title">About</string>
+    <string name="acknowledgement_icons_header">"This app uses Google's Material Design icons from https://material.io/icons/ that are licensed under the Apache 2.0 license, provided below."</string>
+    <string name="acknowledgements_header">Acknowledgements</string>
+    <string name="acknowledgements_pref_key">acknowledgements_pref_key</string>
+    <string name="advertised_name">Advertised name</string>
+    <string name="advertised_service_uuids">Advertised service UUIDs</string>
+    <string name="advertisement_data_header">ADVERTISEMENT DATA</string>
+    <string name="alert_dialog_title_disconnect_from_device">Disconnect from %1$s</string>
+    <string name="apache_license">"Apache License
+
+ Version 2.0, January 2004
+
+ http://www.apache.org/licenses/
+
+ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+ 1. Definitions.
+
+ \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document.
+
+ \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License.
+
+ \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, are controlled by, or are under common control with that entity. For the purposes of this definition, \"control\" means (i) the power, direct or indirect, to cause the direction or management of such entity, whether by contract or otherwise, or (ii) ownership of fifty percent (50%) or more of the outstanding shares, or (iii) beneficial ownership of such entity.
+
+ \"You\" (or \"Your\") shall mean an individual or Legal Entity exercising permissions granted by this License.
+
+ \"Source\" form shall mean the preferred form for making modifications, including but not limited to software source code, documentation source, and configuration files.
+
+ \"Object\" form shall mean any form resulting from mechanical transformation or translation of a Source form, including but not limited to compiled object code, generated documentation, and conversions to other media types.
+
+ \"Work\" shall mean the work of authorship, whether in Source or Object form, made available under the License, as indicated by a copyright notice that is included in or attached to the work (an example is provided in the Appendix below).
+
+ \"Derivative Works\" shall mean any work, whether in Source or Object form, that is based on (or derived from) the Work and for which the editorial revisions, annotations, elaborations, or other modifications represent, as a whole, an original work of authorship. For the purposes of this License, Derivative Works shall not include works that remain separable from, or merely link (or bind by name) to the interfaces of, the Work and Derivative Works thereof.
+
+ \"Contribution\" shall mean any work of authorship, including the original version of the Work and any modifications or additions to that Work or Derivative Works thereof, that is intentionally submitted to Licensor for inclusion in the Work by the copyright owner or by an individual or Legal Entity authorized to submit on behalf of the copyright owner. For the purposes of this definition, \"submitted\" means any form of electronic, verbal, or written communication sent to the Licensor or its representatives, including but not limited to communication on electronic mailing lists, source code control systems, and issue tracking systems that are managed by, or on behalf of, the Licensor for the purpose of discussing and improving the Work, but excluding communication that is conspicuously marked or otherwise designated in writing by the copyright owner as \"Not a Contribution.\"
+
+ \"Contributor\" shall mean Licensor and any individual or Legal Entity on behalf of whom a Contribution has been received by Licensor and subsequently incorporated within the Work. 2. Grant of Copyright License. Subject to the terms and conditions of this License, each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare Derivative Works of, publicly display, publicly perform, sublicense, and distribute the Work and such Derivative Works in Source or Object form. 3. Grant of Patent License. Subject to the terms and conditions of this License, each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable (except as stated in this section) patent license to make, have made, use, offer to sell, sell, import, and otherwise transfer the Work, where such license applies only to those patent claims licensable by such Contributor that are necessarily infringed by their Contribution(s) alone or by combination of their Contribution(s) with the Work to which such Contribution(s) was submitted. If You institute patent litigation against any entity (including a cross-claim or counterclaim in a lawsuit) alleging that the Work or a Contribution incorporated within the Work constitutes direct or contributory patent infringement, then any patent licenses granted to You under this License for that Work shall terminate as of the date such litigation is filed.
+
+ 4. Redistribution. You may reproduce and distribute copies of the Work or Derivative Works thereof in any medium, with or without modifications, and in Source or Object form, provided that You meet the following conditions: You must give any other recipients of the Work or Derivative Works a copy of this License; and
+
+ You must cause any modified files to carry prominent notices stating that You changed the files; and
+
+ You must retain, in the Source form of any Derivative Works that You distribute, all copyright, patent, trademark, and attribution notices from the Source form of the Work, excluding those notices that do not pertain to any part of the Derivative Works; and If the Work includes a \"NOTICE\" text file as part of its distribution, then any Derivative Works that You distribute must include a readable copy of the attribution notices contained within such NOTICE file, excluding those notices that do not pertain to any part of the Derivative Works, in at least one of the following places: within a NOTICE text file distributed as part of the Derivative Works; within the Source form or documentation, if provided along with the Derivative Works; or, within a display generated by the Derivative Works, if and wherever such third-party notices normally appear. The contents of the NOTICE file are for informational purposes only and do not modify the License. You may add Your own attribution notices within Derivative Works that You distribute, alongside or as an addendum to the NOTICE text from the Work, provided that such additional attribution notices cannot be construed as modifying the License. 
+
+ You may add Your own copyright statement to Your modifications and may provide additional or different license terms and conditions for use, reproduction, or distribution of Your modifications, or for any such Derivative Works as a whole, provided Your use, reproduction, and distribution of the Work otherwise complies with the conditions stated in this License.
+
+ 5. Submission of Contributions. Unless You explicitly state otherwise, any Contribution intentionally submitted for inclusion in the Work by You to the Licensor shall be under the terms and conditions of this License, without any additional terms or conditions. Notwithstanding the above, nothing herein shall supersede or modify the terms of any separate license agreement you may have executed with Licensor regarding such Contributions.
+
+ 6. Trademarks. This License does not grant permission to use the trade names, trademarks, service marks, or product names of the Licensor, except as required for reasonable and customary use in describing the origin of the Work and reproducing the content of the NOTICE file.
+
+ 7. Disclaimer of Warranty. Unless required by applicable law or agreed to in writing, Licensor provides the Work (and each Contributor provides its Contributions) on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness of using or redistributing the Work and assume any risks associated with Your exercise of permissions under this License.
+
+ 8. Limitation of Liability. In no event and under no legal theory, whether in tort (including negligence), contract, or otherwise, unless required by applicable law (such as deliberate and grossly negligent acts) or agreed to in writing, shall any Contributor be liable to You for damages, including any direct, indirect, special, incidental, or consequential damages of any character arising as a result of this License or out of the use or inability to use the Work (including but not limited to damages for loss of goodwill, work stoppage, computer failure or malfunction, or any and all other commercial damages or losses), even if such Contributor has been advised of the possibility of such damages.
+
+ 9. Accepting Warranty or Additional Liability. While redistributing the Work or Derivative Works thereof, You may choose to offer, and charge a fee for, acceptance of support, warranty, indemnity, or other liability obligations and/or rights consistent with this License. However, in accepting such obligations, You may act only on Your own behalf and on Your sole responsibility, not on behalf of any other Contributor, and only if You agree to indemnify, defend, and hold each Contributor harmless for any liability incurred by, or claims asserted against, such Contributor by reason of your accepting any such warranty or additional liability.
+
+ END OF TERMS AND CONDITIONS"</string>
+    <string name="app_name">LightBlue</string>
+    <string name="app_theme_pref_key">app_theme</string>
+    <string name="app_theme_title">App theme</string>
+    <string name="app_version_header">App version</string>
+    <string name="appbar_scrolling_view_behavior">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="ascii">ascii</string>
+    <string name="back">Back</string>
+    <string name="back_to_app">Back to the app</string>
+    <string name="backspace">Backspace</string>
+    <string name="battery_saver_theme">Set by Battery Saver</string>
+    <string name="bluetooth_device_image">Generic bluetooth device image</string>
+    <string name="bluetooth_is_required">Bluetooth is not available on your device</string>
+    <string name="bluetooth_needs_to_be_on">Bluetooth needs to be on</string>
+    <string name="bluetooth_power_on_rationale">The app requires the Bluetooth radio to be on in order to start scanning for nearby devices.</string>
+    <string name="bottom_sheet_behavior">com.google.android.material.bottomsheet.BottomSheetBehavior</string>
+    <string name="by_punch_through_accessibility">By Punch Through</string>
+    <string name="ccc_descriptor_not_found_description">The Client Characteristic Configuration descriptor (0x2902) cannot be found on this characteristic despite it claiming to support notifications/indications.</string>
+    <string name="character_counter_content_description">Characters entered %1$d of %2$d</string>
+    <string name="character_counter_overflowed_content_description">Character limit exceeded %1$d of %2$d</string>
+    <string name="character_counter_pattern">%1$d / %2$d</string>
+    <string name="characteristic_name_header">Characteristic Name</string>
+    <string name="characteristic_read_failure">Failed to read from characteristic properly. Status: %1$d</string>
+    <string name="characteristic_uuid_header">Characteristic UUID</string>
+    <string name="characteristic_write_failure">Failed to write to characteristic properly. Status: %1$d</string>
+    <string name="chip_text">Chip text</string>
+    <string name="clear">Clear</string>
+    <string name="clear_text_end_icon_content_description">Clear text</string>
+    <string name="com.crashlytics.android.build_id">efc720ed-60f9-47a0-89a9-b7390af7714e</string>
+    <string name="common_google_play_services_enable_button">Enable</string>
+    <string name="common_google_play_services_enable_text">"%1$s won't work unless you enable Google Play services."</string>
+    <string name="common_google_play_services_enable_title">Enable Google Play services</string>
+    <string name="common_google_play_services_install_button">Install</string>
+    <string name="common_google_play_services_install_text">"%1$s won't run without Google Play services, which are missing from your device."</string>
+    <string name="common_google_play_services_install_title">Get Google Play services</string>
+    <string name="common_google_play_services_notification_channel_name">Google Play services availability</string>
+    <string name="common_google_play_services_notification_ticker">Google Play services error</string>
+    <string name="common_google_play_services_unknown_issue">%1$s is having trouble with Google Play services. Please try again.</string>
+    <string name="common_google_play_services_unsupported_text">"%1$s won't run without Google Play services, which are not supported by your device."</string>
+    <string name="common_google_play_services_update_button">Update</string>
+    <string name="common_google_play_services_update_text">"%1$s won't run unless you update Google Play services."</string>
+    <string name="common_google_play_services_update_title">Update Google Play services</string>
+    <string name="common_google_play_services_updating_text">"%1$s won't run without Google Play services, which are currently updating."</string>
+    <string name="common_google_play_services_wear_update_text">New version of Google Play services needed. It will update itself shortly.</string>
+    <string name="common_open_on_phone">Open on phone</string>
+    <string name="common_signin_button_text">Sign in</string>
+    <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="compose_email_using">Compose Email Using:</string>
+    <string name="connect_prompt">Connect</string>
+    <string name="connected">Connected</string>
+    <string name="connected_to_device">Connected to device!</string>
+    <string name="connecting_to_device">Connecting to device</string>
+    <string name="connection_status">Connection status</string>
+    <string name="contact_us">Contact us</string>
+    <string name="copy">Copy</string>
+    <string name="csv_file">CSV File</string>
+    <string name="dark_theme">Dark</string>
+    <string name="data_format">Data format</string>
+    <string name="default_web_client_id">669850226301-4ouot02ber769tkl8pd3mobelbttd90o.apps.googleusercontent.com</string>
+    <string name="degrees_c">°C</string>
+    <string name="degrees_f">°F</string>
+    <string name="descriptor_read_failure">Failed to read from descriptor properly. Status: %1$d</string>
+    <string name="descriptor_write_failure">Failed to write to descriptor properly. Status: %1$d</string>
+    <string name="descriptors_header">DESCRIPTORS</string>
+    <string name="development_board">Development Board</string>
+    <string name="device_hardware_address">Device Address</string>
+    <string name="device_information_header">DEVICE INFORMATION</string>
+    <string name="device_mac_placeholder">MAC address</string>
+    <string name="device_name_placeholder">Scan Result</string>
+    <string name="device_not_connected_to_network">Your device does not seem to be connected to the Internet. Please try again later.</string>
+    <string name="disconnect_prompt">Disconnect</string>
+    <string name="disconnected_from_device_title">Disconnected from Device</string>
+    <string name="disconnected_stale_data">Disconnected, data is stale</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="email_address_hint">Email Address</string>
+    <string name="email_collector_duplicate_email">This email has already been used to sign up for the Punch Through newsletter. Thank you for your continued interest, you will not be prompted to sign up again.</string>
+    <string name="email_collector_generic_error">Could not save email. Please try again and — if the error persists — contact us at info@punchthrough.com</string>
+    <string name="email_collector_invalid_email">Invalid email address, please try again with a valid email address.</string>
+    <string name="email_collector_oops">Oops!</string>
+    <string name="email_collector_success_message">You should receive a confirmation email shortly.</string>
+    <string name="email_collector_thank_you">Thank you for subscribing!</string>
+    <string name="empty_text_placeholder">&lt;empty></string>
+    <string name="enjoying_lightblue_explorer">Enjoying LightBlue®?</string>
+    <string name="error_exporting_logs">Failed to export log content</string>
+    <string name="error_icon_content_description">Error</string>
+    <string name="event_log_date_time_placholder">EventLog Date and Time Details</string>
+    <string name="event_log_event_tag_placeholder">EventLog Tag</string>
+    <string name="event_log_text_placeholder">EventLog Text and Description</string>
+    <string name="expand_button_title">Advanced</string>
+    <string name="exposed_dropdown_menu_content_description">Show dropdown menu</string>
+    <string name="fab_transformation_scrim_behavior">com.google.android.material.transformation.FabTransformationScrimBehavior</string>
+    <string name="fab_transformation_sheet_behavior">com.google.android.material.transformation.FabTransformationSheetBehavior</string>
+    <string name="failed_to_establish_connection">Failed to establish connection to device, please select another device or try again.</string>
+    <string name="filter_by_device_name">Filter by name / MAC address</string>
+    <string name="filter_by_device_name_or_address">Filter by device name or address</string>
+    <string name="firebase_database_url">https://lightblue-explorer.firebaseio.com</string>
+    <string name="gatt_services_characteristics_header">GATT SERVICES &amp; CHARACTERISTICS</string>
+    <string name="gcm_defaultSenderId">669850226301</string>
+    <string name="generic_error_may_have_been_disconnected">An error has occurred. The device may have been disconnected.</string>
+    <string name="get_started">Get Started</string>
+    <string name="google_api_key">AIzaSyDynFtwUV6aAD0kerTCTsOIw6DjvEnl_24</string>
+    <string name="google_app_id">1:669850226301:android:4464ab3aff31f674</string>
+    <string name="google_crash_reporting_api_key">AIzaSyDynFtwUV6aAD0kerTCTsOIw6DjvEnl_24</string>
+    <string name="google_storage_bucket">lightblue-explorer.appspot.com</string>
+    <string name="got_it_alert_action">Got It</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="help_and_feedback_description">Questions, comments or suggestions? Shoot us an email.</string>
+    <string name="help_and_feedback_pref_key">help_and_feedback</string>
+    <string name="help_and_feedback_title">Help and feedback</string>
+    <string name="hex">hex</string>
+    <string name="hex_char_0">0</string>
+    <string name="hex_char_1">1</string>
+    <string name="hex_char_2">2</string>
+    <string name="hex_char_3">3</string>
+    <string name="hex_char_4">4</string>
+    <string name="hex_char_5">5</string>
+    <string name="hex_char_6">6</string>
+    <string name="hex_char_7">7</string>
+    <string name="hex_char_8">8</string>
+    <string name="hex_char_9">9</string>
+    <string name="hex_char_a">A</string>
+    <string name="hex_char_b">B</string>
+    <string name="hex_char_c">C</string>
+    <string name="hex_char_d">D</string>
+    <string name="hex_char_e">E</string>
+    <string name="hex_char_f">F</string>
+    <string name="hex_keyboard_done">Done</string>
+    <string name="hide_bottom_view_on_scroll_behavior">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
+    <string name="icon_content_description">Dialog Icon</string>
+    <string name="input_data_tap_write_button_to_begin">Input some data and tap on the \"Write\" button to begin</string>
+    <string name="language">Language:</string>
+    <string name="lbx_privacy_policy_url">https://punchthrough.com/app-privacy-policy?utm_source=LBX&amp;utm_medium=Android</string>
+    <string name="learn_about_our_insights_into_ble">Learn about our insights into BLE.</string>
+    <string name="let_s_get_started">"Let's get started."</string>
+    <string name="light_theme">Light</string>
+    <string name="location_permission_rationale">"Starting from Android M (6.0), the system requires apps to be granted location access in order to scan for BLE devices.
+
+If you've previously granted the app location permission before, this is because the app now targets Android Q (10) and is required to prompt you for a different level of location permission.
+
+Your location is never actually used aside from enabling the app to perform BLE scans."</string>
+    <string name="location_permission_required">Location Permission Required</string>
+    <string name="log_activity_title">BLE Activity Log</string>
+    <string name="log_title">Log</string>
+    <string name="logo_accessibility">LightBlue</string>
+    <string name="malformed_write_payload">Malformed write payload detected, make sure the correct format is selected.</string>
+    <string name="microchip">Microchip</string>
+    <string name="microchip_accel">Accelerometer</string>
+    <string name="microchip_accel_x">X</string>
+    <string name="microchip_accel_y">Y</string>
+    <string name="microchip_accel_z">Z</string>
+    <string name="microchip_button">Button State</string>
+    <string name="microchip_led">LED</string>
+    <string name="microchip_logo_description">Microchip logo</string>
+    <string name="microchip_ref_docs">Microchip Reference Documents</string>
+    <string name="microchip_ref_documentation">Reference Documentation</string>
+    <string name="microchip_serial">Serial Data</string>
+    <string name="microchip_temp">Temperature</string>
+    <string name="microchip_values_placeholder">-</string>
+    <string name="more_info_accessibility">See more info</string>
+    <string name="mtrl_badge_numberless_content_description">New notification</string>
+    <string name="mtrl_chip_close_icon_content_description">Remove %1$s</string>
+    <string name="mtrl_exceed_max_badge_number_suffix">%1$d%2$s</string>
+    <string name="mtrl_picker_a11y_next_month">Change to next month</string>
+    <string name="mtrl_picker_a11y_prev_month">Change to previous month</string>
+    <string name="mtrl_picker_announce_current_selection">Current selection: %1$s</string>
+    <string name="mtrl_picker_cancel">@android:string/cancel</string>
+    <string name="mtrl_picker_confirm">@android:string/ok</string>
+    <string name="mtrl_picker_date_header_selected">%1$s</string>
+    <string name="mtrl_picker_date_header_title">Select a Date</string>
+    <string name="mtrl_picker_date_header_unselected">Selected date</string>
+    <string name="mtrl_picker_day_of_week_column_header">Column of days: %1$s</string>
+    <string name="mtrl_picker_invalid_format">Invalid format.</string>
+    <string name="mtrl_picker_invalid_format_example">Example: %1$s</string>
+    <string name="mtrl_picker_invalid_format_use">Use: %1$s</string>
+    <string name="mtrl_picker_invalid_range">Invalid range.</string>
+    <string name="mtrl_picker_navigate_to_year_description">Navigate to year %1$s</string>
+    <string name="mtrl_picker_out_of_range">Out of range: %1$s</string>
+    <string name="mtrl_picker_range_header_only_end_selected">Start date – %1$s</string>
+    <string name="mtrl_picker_range_header_only_start_selected">%1$s – End date</string>
+    <string name="mtrl_picker_range_header_selected">%1$s – %2$s</string>
+    <string name="mtrl_picker_range_header_title">Select a Date Range</string>
+    <string name="mtrl_picker_range_header_unselected">Start date – End date</string>
+    <string name="mtrl_picker_save">Save</string>
+    <string name="mtrl_picker_text_input_date_hint">Date</string>
+    <string name="mtrl_picker_text_input_date_range_end_hint">End date</string>
+    <string name="mtrl_picker_text_input_date_range_start_hint">Start date</string>
+    <string name="mtrl_picker_text_input_day_abbr">d</string>
+    <string name="mtrl_picker_text_input_month_abbr">m</string>
+    <string name="mtrl_picker_text_input_year_abbr">y</string>
+    <string name="mtrl_picker_toggle_to_calendar_input_mode">Switch to calendar input mode</string>
+    <string name="mtrl_picker_toggle_to_day_selection">Tap to switch to selecting a day</string>
+    <string name="mtrl_picker_toggle_to_text_input_mode">Switch to text input mode</string>
+    <string name="mtrl_picker_toggle_to_year_selection">Tap to switch to selecting a year</string>
+    <string name="mtu_out_of_range">MTU size should be between 20–517</string>
+    <string name="mtu_updated_text">Request succeeded, current MTU is %d</string>
+    <string name="network_is_offline">Network is offline</string>
+    <string name="no_characteristic_available">No characteristic available.</string>
+    <string name="no_data">No data</string>
+    <string name="no_data_available">No data available</string>
+    <string name="no_descriptors_associated_with_characteristic">No descriptors associated with this characteristic</string>
+    <string name="no_device_info_available">Unable to detect device information, please provide the manufacturer and model of your device</string>
+    <string name="no_value_read_recently">No value read recently</string>
+    <string name="no_value_written_recently">No value written recently</string>
+    <string name="not_connected">Not connected</string>
+    <string name="not_pushed_all_caps">NOT PUSHED</string>
+    <string name="not_set">Not set</string>
+    <string name="not_yet_connected">Not yet connected</string>
+    <string name="notif_indication_cell_subtitle">Able to be subscribed to for notifications/indications on changes to the characteristic</string>
+    <string name="notif_indication_cell_title">Supports notifications/indications</string>
+    <string name="onboarding_explanation">"We're Punch Through, and we're experts in BLE. LightBlue® was developed years ago to help us test devices for our own clients, and we've been sharing the love with over one million users such as yourself ever since."</string>
+    <string name="onboarding_title">Hello!</string>
+    <string name="onboarding_welcome">Welcome to</string>
+    <string name="password_toggle_content_description">Show password</string>
+    <string name="path_password_eye">M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z</string>
+    <string name="path_password_eye_mask_strike_through">M2,4.27 L19.73,22 L22.27,19.46 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
+    <string name="path_password_eye_mask_visible">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
+    <string name="path_password_strike_through">M3.27,4.27 L19.74,20.74</string>
+    <string name="plain_text">Plain Text</string>
+    <string name="preference_copied">\"%1$s\" copied to clipboard.</string>
+    <string name="privacy_policy_pref_key">privacy_policy_pref_key</string>
+    <string name="privacy_policy_settings_title">Privacy policy</string>
+    <string name="privacy_policy_title">LightBlue® Privacy Policy</string>
+    <string name="project_id">lightblue-explorer</string>
+    <string name="prompt_to_choose_log_file_type">Share log content as:</string>
+    <string name="properties_header">PROPERTIES</string>
+    <string name="punch_through_header_image_content_description">Punch Through Header Image</string>
+    <string name="punchthrough_about_url">https://punchthrough.com/?utm_source=LBX&amp;utm_medium=Android</string>
+    <string name="pushed_all_caps">PUSHED</string>
+    <string name="quit">Quit</string>
+    <string name="read">Read</string>
+    <string name="read_again_button_title">Read again</string>
+    <string name="read_or_indicated_values">READ/INDICATED VALUES</string>
+    <string name="readable_cell_subtitle">Able to be read from</string>
+    <string name="readable_cell_title">Readable</string>
+    <string name="reconnect">Reconnect</string>
+    <string name="refresh_title">Refresh</string>
+    <string name="request_mtu_dialog_cancel_button_text">Cancel</string>
+    <string name="request_mtu_dialog_ok_button_text">OK</string>
+    <string name="request_mtu_error_text" formatted="false">Request failed with error code %d, current MTU is %d</string>
+    <string name="request_mtu_hint_text">Enter MTU size (between 20–517)</string>
+    <string name="request_mtu_title">Request MTU…</string>
+    <string name="rescan">Rescan</string>
+    <string name="retry_exporting_logs_prompt">Retry</string>
+    <string name="return_to_scanning_prompt">Do you want to disconnect from %1$s?</string>
+    <string name="rssi_paired">Paired</string>
+    <string name="scan_activity_title">LightBlue®</string>
+    <string name="scan_failed_application_registration_failed">"There is an issue registering the app with Android while requesting to start a BLE scan. The relevant error code is SCAN_FAILED_APPLICATION_REGISTRATION_FAILED and the only way to resolve this is by restarting your device. We're very sorry for this inconvenience."</string>
+    <string name="search_devices_title">Search by name / MAC address</string>
+    <string name="search_menu_title">Search</string>
+    <string name="selected_row_accessibility">Selected row icon</string>
+    <string name="send_email_using">Send Email Using:</string>
+    <string name="send_usage_data_pref_key">send_usage_data</string>
+    <string name="send_usage_data_summary">Help improve LightBlue® by sending anonymous usage data to Punch Through.</string>
+    <string name="send_usage_data_title">Send usage data</string>
+    <string name="service_uuid_header">Service UUID</string>
+    <string name="settings_header">Settings</string>
+    <string name="settings_title">Settings</string>
+    <string name="share_log_text_chooser_text">Share log text using:</string>
+    <string name="show_onboarding_description">Learn about LightBlue® and why we made it.</string>
+    <string name="show_onboarding_pref_key">reset_onboarding</string>
+    <string name="show_onboarding_title">Show onboarding interface</string>
+    <string name="show_paired_devices_title">Show paired devices</string>
+    <string name="signal_strength_accessibility">Signal strength indicator</string>
+    <string name="signal_strength_placeholder">-69dBm</string>
+    <string name="signal_strength_template">%1$ddBm</string>
+    <string name="single_logical_value_disclaimer">Values are interpreted as single logical values. For unsigned read or indicated values, only 7 bytes are supported at most.</string>
+    <string name="sort_title">Sort</string>
+    <string name="sorted_toast_text">Sorted results by signal strength</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="subscribe">Subscribe</string>
+    <string name="subscribed">Subscribed</string>
+    <string name="subtitle_placeholder">Subtitle</string>
+    <string name="success_exporting_logs">Successfully exported logs</string>
+    <string name="successfully_subscribed_char">Successfully subscribed to characteristic changes</string>
+    <string name="successfully_unsubscribed_char">Successfully opted out of characteristic changes</string>
+    <string name="summary_collapsed_preference_list">%1$s, %2$s</string>
+    <string name="support_email_subject">[LBX Android] Question/feedback</string>
+    <string name="supported_escape_sequences">\\b, \\f, \\n, \\r, \\t, \\x00, \\u0000 and \\000 escape sequences are supported.</string>
+    <string name="system_default_theme">System default</string>
+    <string name="tap_on_option_to_begin">Tap on one of the buttons above — if available — to begin</string>
+    <string name="title_placeholder">Title</string>
+    <string name="unable_to_register_for_indications">Unable to register for indications</string>
+    <string name="unable_to_start_scan">Unable to start scan</string>
+    <string name="unnamed_device">Unnamed</string>
+    <string name="unsubscribe">Unsubscribe</string>
+    <string name="v7_preference_off">OFF</string>
+    <string name="v7_preference_on">ON</string>
+    <string name="version_number">version_number_pref_key</string>
+    <string name="view">View</string>
+    <string name="welcome">Welcome!</string>
+    <string name="who_is_punch_through">Who is Punch Through?</string>
+    <string name="writable_cell_subtitle">Able to be written to</string>
+    <string name="writable_cell_title">Writable</string>
+    <string name="write">Write</string>
+    <string name="write_button">WRITE</string>
+    <string name="write_value_hint_binary">Binary data (e.g. 0b0100 or 0100)</string>
+    <string name="write_value_hint_hex">Hex data (e.g. C0A7 or c0a7)</string>
+    <string name="write_value_hint_signed_big">Signed big-endian data (e.g. -1024)</string>
+    <string name="write_value_hint_signed_little">Signed little-endian data (e.g. -1024)</string>
+    <string name="write_value_hint_unsigned_big">Unsigned big-endian data (e.g. 1024)</string>
+    <string name="write_value_hint_unsigned_little">Unsigned little-endian data (e.g. 1024)</string>
+    <string name="write_value_hint_utf8_string">UTF-8 string (e.g. Hi)</string>
+    <string name="written_values">WRITTEN VALUES</string>
+</resources>

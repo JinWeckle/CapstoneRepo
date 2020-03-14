@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="data_format_options">
+        <item>Hex</item>
+        <item>UTF-8 String</item>
+        <item>Binary</item>
+        <item>Unsigned Little-Endian</item>
+        <item>Signed Little-Endian</item>
+        <item>Unsigned Big-Endian</item>
+        <item>Signed Big-Endian</item>
+    </string-array>
+</resources>

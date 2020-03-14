@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+        <LinearLayout android:orientation="vertical" android:id="@id/signal_strength_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignBottom="@id/device_address" android:layout_centerVertical="true" android:layout_marginEnd="16.0dip" android:layout_alignParentStart="true">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/signal_strength_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_signal_high" android:tint="@android:color/darker_gray" android:layout_centerHorizontal="true" android:contentDescription="@string/signal_strength_accessibility" />
+            </RelativeLayout>
+            <TextView android:textSize="12.0sp" android:id="@id/signal_strength_rssi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/signal_strength_placeholder" />
+        </LinearLayout>
+        <TextView android:textSize="20.0sp" android:textStyle="bold" android:id="@id/device_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/device_name_placeholder" android:layout_toEndOf="@id/signal_strength_container" />
+        <TextView android:textSize="14.0sp" android:textStyle="italic" android:id="@id/device_address" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/device_mac_placeholder" android:layout_below="@id/device_name" android:layout_toEndOf="@id/signal_strength_container" />
+        <ImageView android:id="@id/microchip_logo" android:visibility="gone" android:layout_width="64.0dip" android:layout_height="48.0dip" android:src="@drawable/microchip_logo" android:contentDescription="@string/microchip_logo_description" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</LinearLayout>

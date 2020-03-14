@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="64.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="18.0sp" android:id="@id/title_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginStart="16.0dip" />
+    <TextView android:textSize="16.0sp" android:id="@id/subtitle_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/title_text" android:layout_marginStart="16.0dip" />
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_chevron_right" android:layout_centerVertical="true" android:contentDescription="@string/more_info_accessibility" android:layout_marginEnd="8.0dip" android:layout_alignParentEnd="true" />
+</RelativeLayout>

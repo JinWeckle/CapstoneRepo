@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#ffff92b6</color>
+    <color name="colorDisabledGrey">#1fffffff</color>
+    <color name="colorDisabledLightGrey">#61ffffff</color>
+    <color name="colorErrorRed">#ffcf6679</color>
+    <color name="colorInvertedText">@android:color/black</color>
+    <color name="colorMicrochipCardBackground">#ff353739</color>
+    <color name="colorPrimary">#ff039be5</color>
+    <color name="colorPrimaryDark">#ff0277bd</color>
+    <color name="colorPrimaryText">@android:color/white</color>
+    <color name="colorSpinnerBackground">#ff454648</color>
+    <color name="colorSpinnerBorder">@android:color/white</color>
+    <color name="colorSuccessGreen">#ff66bb69</color>
+</resources>

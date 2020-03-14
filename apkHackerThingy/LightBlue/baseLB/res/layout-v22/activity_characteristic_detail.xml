@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.core.widget.NestedScrollView android:id="@id/characteristic_details_scroll_view" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/hex_keyboard_container_view" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/characteristic_details_parent_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="20.0sp" android:textStyle="bold" android:id="@id/properties_section_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/properties_header" android:layout_marginStart="16.0dip" />
+            <View android:background="@android:color/darker_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/properties_list" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/data_format_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginStart="16.0dip">
+                <TextView android:textSize="18.0sp" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/data_format" android:layout_marginEnd="16.0dip" />
+                <RelativeLayout android:background="@drawable/data_format_spinner_background" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="4.0dip">
+                    <Spinner android:entries="@array/data_format_options" android:id="@id/data_format_spinner" android:layout_width="wrap_content" android:layout_height="wrap_content" android:spinnerMode="dropdown" />
+                </RelativeLayout>
+            </LinearLayout>
+            <TextView android:id="@id/single_logical_value_disclaimer" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:text="@string/single_logical_value_disclaimer" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+            <TextView android:textSize="20.0sp" android:textStyle="bold" android:id="@id/read_indicated_values_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/read_or_indicated_values" android:layout_marginStart="16.0dip" />
+            <View android:background="@android:color/darker_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip" />
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:layout_marginStart="16.0dip">
+                <Button android:textColor="@android:color/white" android:id="@id/read_again_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/read_again_button_title" android:layout_marginEnd="8.0dip" android:backgroundTint="@color/colorPrimaryDark" style="@style/Widget.AppCompat.Button" />
+                <Button android:id="@id/subscribe_notification_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subscribe" style="@style/Widget.AppCompat.Button" />
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/read_or_indicated_values_list" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <LinearLayout android:orientation="vertical" android:id="@id/written_values_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="20.0sp" android:textStyle="bold" android:id="@id/written_values_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/written_values" android:layout_marginStart="16.0dip" />
+                <View android:background="@android:color/darker_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip" />
+                <TextView android:id="@id/escape_sequences_info" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:text="@string/supported_escape_sequences" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:layout_marginStart="16.0dip">
+                    <EditText android:id="@id/write_value_field" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/write_value_hint_hex" android:layout_weight="1.0" android:inputType="textVisiblePassword|textCapCharacters|textNoSuggestions" android:layout_marginEnd="8.0dip" android:importantForAutofill="no" />
+                    <RelativeLayout android:layout_width="wrap_content" android:layout_height="fill_parent">
+                        <Button android:textColor="@android:color/white" android:id="@id/write_value_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/write_button" android:layout_centerVertical="true" android:backgroundTint="@color/colorPrimaryDark" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView android:id="@id/written_values_list" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <TextView android:textSize="20.0sp" android:textStyle="bold" android:id="@id/descriptor_section_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/descriptors_header" android:layout_marginStart="16.0dip" />
+            <View android:background="@android:color/darker_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/descriptors_list" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <include android:id="@id/hex_keyboard_container_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" layout="@layout/hex_keyboard" />
+</androidx.constraintlayout.widget.ConstraintLayout>

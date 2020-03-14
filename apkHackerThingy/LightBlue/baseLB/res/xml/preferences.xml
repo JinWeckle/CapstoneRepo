@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:title="@string/send_usage_data_title" android:key="@string/send_usage_data_pref_key" android:summary="@string/send_usage_data_summary" android:defaultValue="true" />
+    <ListPreference android:title="@string/app_theme_title" android:key="@string/app_theme_pref_key" android:summary="%s" />
+    <Preference android:title="@string/show_onboarding_title" android:key="@string/show_onboarding_pref_key" android:summary="@string/show_onboarding_description" />
+    <PreferenceCategory android:title="Support" android:key="support_pref_category">
+        <Preference android:title="@string/help_and_feedback_title" android:key="@string/help_and_feedback_pref_key" android:summary="@string/help_and_feedback_description" />
+        <Preference android:title="@string/app_version_header" android:key="@string/version_number" />
+        <Preference android:title="@string/acknowledgements_header" android:key="@string/acknowledgements_pref_key" />
+        <Preference android:title="@string/privacy_policy_settings_title" android:key="@string/privacy_policy_pref_key" />
+    </PreferenceCategory>
+</PreferenceScreen>

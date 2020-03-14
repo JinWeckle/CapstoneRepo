@@ -98,9 +98,10 @@ char c = ' ';
    Only recognizes characters [A-Z],[0-9], ?, !, :, .
 */
 
-//char WORD[] = "Welcome to the MVHS Library!";
+char WORD[] = "Welcome to the MVHS Library!";
 //char WORD[] = "Mr Jones Class";
-char WORD[95];
+//char WORD[] = " ";
+int index = 0;
 
 /*
    When finished, click the arrow pointing to the right at the top of the page to upload to running board
@@ -697,7 +698,7 @@ void setup() {
   FastLED.addLeds<WS2812, LED_PIN7>(ledsRow7, NUM_LEDS);
   FastLED.addLeds<WS2812, LED_PIN8>(ledsRow8, NUM_LEDS);
   FastLED.addLeds<WS2812, LED_PIN9>(ledsRow9, NUM_LEDS);
-  FastLED.setBrightness(50); //0 to 255 (255 is brightest, but you cannot see the LEDs below about 25)
+  FastLED.setBrightness(20); //0 to 255 (255 is brightest, but you cannot see the LEDs below about 25)
   //LED light setup for each LED
   //NOTE: Parameters are GRB (Green, Red, Blue) NOT RGB (Red, Green, Blue)
   for ( int i = 0; i < NUM_LEDS; i++) {
@@ -738,17 +739,33 @@ void(* resetFunc) (void) = 0; //Method for resetting the Arduino (just call rese
 void loop() {
   if (BTSerial.available())
   {
-    int index = 0;
+    if(index == 0)
+    {
+    memset(WORD, 0, sizeof WORD);
+      
+    }
     c = BTSerial.read();
 
     String tempStr;
     tempStr += c;
-    tempStr += WORD[index];
-    //Serial.println(WORD);
+    //Serial.println(tempStr);
+    //tempStr += WORD[index];
+    //for(index = 0; index < sizeof WORD; index++)
+    {
+      //Serial.println(index);
+      //memset(WORD, c, index);
+      WORD[index] = c;
+      //Serial.println(WORD[index]);
+    }
+    //memset(WORD, 0, sizeof WORD);
+    Serial.println(WORD);
     index++;
-    
     delay(50);
     //resetFunc();
+  }
+  else
+  {
+    index = 0;
   }
   //Holds temporary position of TOP_LEFT
   int left = TOP_LEFT;

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/loading_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <ProgressBar android:id="@id/loading_microchip_progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:indeterminateTint="@color/colorAccent" android:indeterminateTintMode="src_in" style="@android:style/Widget.Material.Light.ProgressBar" />
+        <TextView android:id="@id/loading_microchip_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/connecting_to_device" android:layout_below="@id/loading_microchip_progress_bar" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/microchip_container" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:id="@id/microchip_component_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:id="@id/microchip_title_container" android:layout_width="wrap_content" android:layout_height="80.0dip">
+                        <TextView android:textSize="20.0sp" android:id="@id/microchip_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/microchip" android:layout_marginStart="16.0dip" />
+                        <TextView android:textSize="16.0sp" android:textStyle="bold" android:id="@id/development_board" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/development_board" android:layout_marginStart="16.0dip" />
+                    </LinearLayout>
+                    <ImageView android:layout_width="80.0dip" android:layout_height="50.0dip" android:layout_marginTop="8.0dip" android:src="@drawable/microchip_logo" android:contentDescription="@string/microchip_logo_description" android:layout_marginEnd="16.0dip" android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="120.0dip" android:layout_marginTop="16.0dip" android:baselineAligned="false">
+                    <RelativeLayout android:background="@color/colorMicrochipCardBackground" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.55" android:layout_marginStart="16.0dip">
+                        <LinearLayout android:layout_width="fill_parent" android:layout_height="24.0dip">
+                            <TextView android:textColor="@color/colorWhite" android:background="@color/colorDarkBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/microchip_led" android:paddingStart="4.0dip" />
+                        </LinearLayout>
+                        <View android:id="@id/dummy_vert_center" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_centerVertical="true" />
+                        <com.punchthrough.lightblueexplorer.views.SwitchPlus android:theme="@style/MicrochipGreenSwitchStyle" android:id="@id/led_switch_one" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-5.0dip" android:layout_below="@id/dummy_vert_center" android:layout_marginStart="40.0dip" android:layout_alignParentStart="true" />
+                        <com.punchthrough.lightblueexplorer.views.SwitchPlus android:theme="@style/MicrochipRedSwitchStyle" android:id="@id/led_switch_two" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-5.0dip" android:layout_below="@id/dummy_vert_center" android:layout_marginEnd="40.0dip" android:layout_alignParentEnd="true" />
+                    </RelativeLayout>
+                    <RelativeLayout android:background="@color/colorMicrochipCardBackground" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.45" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+                        <LinearLayout android:layout_width="fill_parent" android:layout_height="24.0dip">
+                            <TextView android:textColor="@color/colorWhite" android:background="@color/colorDarkBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/microchip_button" android:paddingStart="4.0dip" />
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="24.0dip">
+                            <TextView android:textSize="18.0sp" android:textColor="@color/colorPrimaryText" android:gravity="center" android:id="@id/pushed_text" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="4.0dip" android:text="@string/pushed_all_caps" android:layout_weight="0.5" android:textAlignment="center" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+                            <TextView android:textSize="18.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/not_pushed_text" android:background="@color/colorMicrochipRed" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip" android:text="@string/not_pushed_all_caps" android:layout_weight="0.5" android:textAlignment="center" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+                <RelativeLayout android:background="@color/colorMicrochipCardBackground" android:layout_width="fill_parent" android:layout_height="120.0dip" android:layout_marginTop="16.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+                    <LinearLayout android:layout_width="fill_parent" android:layout_height="24.0dip">
+                        <TextView android:textColor="@color/colorWhite" android:background="@color/colorDarkBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/microchip_temp" android:paddingStart="4.0dip" />
+                    </LinearLayout>
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <TextView android:textColor="@color/colorBlack" android:gravity="center" android:id="@id/temperature_text" android:background="@android:color/white" android:layout_width="50.0dip" android:layout_height="40.0dip" android:layout_marginTop="-10.0dip" android:text="@string/microchip_values_placeholder" android:layout_below="@id/temp_center" android:textAlignment="center" android:layout_marginEnd="20.0dip" android:layout_toStartOf="@id/temp_center" />
+                        <View android:id="@id/temp_center" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_centerInParent="true" />
+                        <com.google.android.material.tabs.TabLayout android:id="@id/temp_type_tabs" android:layout_width="100.0dip" android:layout_height="40.0dip" android:layout_marginTop="-10.0dip" android:layout_below="@id/temp_center" android:layout_marginStart="20.0dip" android:layout_toEndOf="@id/temp_center" app:tabIndicatorColor="@color/colorMicrochipRed">
+                            <com.google.android.material.tabs.TabItem android:layout_width="50.0dip" android:layout_height="fill_parent" android:text="@string/degrees_f" />
+                            <com.google.android.material.tabs.TabItem android:layout_width="50.0dip" android:layout_height="fill_parent" android:text="@string/degrees_c" />
+                        </com.google.android.material.tabs.TabLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+                <RelativeLayout android:background="@color/colorMicrochipCardBackground" android:layout_width="fill_parent" android:layout_height="180.0dip" android:layout_marginTop="16.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+                    <LinearLayout android:layout_width="fill_parent" android:layout_height="24.0dip">
+                        <TextView android:textColor="@color/colorWhite" android:background="@color/colorDarkBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/microchip_accel" android:paddingStart="4.0dip" />
+                    </LinearLayout>
+                    <View android:id="@id/accel_center" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_centerInParent="true" />
+                    <RelativeLayout android:id="@id/accel_container_x" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginBottom="16.0dip" android:layout_above="@id/accel_container_y">
+                        <TextView android:gravity="center" android:id="@id/accel_label_x" android:layout_width="50.0dip" android:layout_height="40.0dip" android:text="@string/microchip_accel_x" android:textAlignment="center" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+                        <ProgressBar android:theme="@style/MicrochipProgressBarStyle" android:id="@id/accel_progressbar_x" android:layout_width="fill_parent" android:layout_height="20.0dip" android:layout_centerVertical="true" android:layout_toStartOf="@id/accel_value_x" android:layout_toEndOf="@id/accel_label_x" style="?android:progressBarStyleHorizontal" />
+                        <TextView android:textColor="@color/colorBlack" android:gravity="center" android:id="@id/accel_value_x" android:background="@android:color/white" android:layout_width="50.0dip" android:layout_height="40.0dip" android:text="@string/microchip_values_placeholder" android:textAlignment="center" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" android:layout_alignParentEnd="true" />
+                    </RelativeLayout>
+                    <RelativeLayout android:id="@id/accel_container_y" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="-10.0dip" android:layout_below="@id/accel_center">
+                        <TextView android:gravity="center" android:id="@id/accel_label_y" android:layout_width="50.0dip" android:layout_height="40.0dip" android:text="@string/microchip_accel_y" android:textAlignment="center" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+                        <ProgressBar android:theme="@style/MicrochipProgressBarStyle" android:id="@id/accel_progressbar_y" android:layout_width="fill_parent" android:layout_height="20.0dip" android:layout_centerVertical="true" android:layout_toStartOf="@id/accel_value_y" android:layout_toEndOf="@id/accel_label_y" android:thumbTint="@color/colorMicrochipRed" style="?android:progressBarStyleHorizontal" />
+                        <TextView android:textColor="@color/colorBlack" android:gravity="center" android:id="@id/accel_value_y" android:background="@android:color/white" android:layout_width="50.0dip" android:layout_height="40.0dip" android:text="@string/microchip_values_placeholder" android:textAlignment="center" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" android:layout_alignParentEnd="true" />
+                    </RelativeLayout>
+                    <RelativeLayout android:id="@id/accel_container_z" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="6.0dip" android:layout_below="@id/accel_container_y">
+                        <TextView android:gravity="center" android:id="@id/accel_label_z" android:layout_width="50.0dip" android:layout_height="40.0dip" android:text="@string/microchip_accel_z" android:textAlignment="center" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+                        <ProgressBar android:theme="@style/MicrochipProgressBarStyle" android:id="@id/accel_progressbar_z" android:layout_width="fill_parent" android:layout_height="20.0dip" android:layout_centerVertical="true" android:layout_toStartOf="@id/accel_value_z" android:layout_toEndOf="@id/accel_label_z" android:thumbTint="@color/colorMicrochipRed" style="?android:progressBarStyleHorizontal" />
+                        <TextView android:textColor="@color/colorBlack" android:gravity="center" android:id="@id/accel_value_z" android:background="@android:color/white" android:layout_width="50.0dip" android:layout_height="40.0dip" android:text="@string/microchip_values_placeholder" android:textAlignment="center" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" android:layout_alignParentEnd="true" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                <RelativeLayout android:background="@color/colorMicrochipCardBackground" android:layout_width="fill_parent" android:layout_height="288.0dip" android:layout_marginTop="16.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+                    <LinearLayout android:id="@id/serial_label_container" android:layout_width="fill_parent" android:layout_height="24.0dip">
+                        <TextView android:textColor="@color/colorWhite" android:background="@color/colorDarkBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/microchip_serial" android:paddingStart="4.0dip" />
+                    </LinearLayout>
+                    <com.google.android.material.tabs.TabLayout android:id="@id/language_tabs" android:layout_width="120.0dip" android:layout_height="40.0dip" android:layout_below="@id/serial_label_container" android:layout_marginStart="16.0dip" app:tabIndicatorColor="@color/colorMicrochipRed">
+                        <com.google.android.material.tabs.TabItem android:id="@id/language_tab_ascii" android:tag="0" android:layout_width="60.0dip" android:layout_height="fill_parent" android:text="@string/ascii" />
+                        <com.google.android.material.tabs.TabItem android:id="@id/language_tab_hex" android:tag="1" android:layout_width="60.0dip" android:layout_height="fill_parent" android:text="@string/hex" />
+                    </com.google.android.material.tabs.TabLayout>
+                    <Button android:textColor="@android:color/white" android:id="@id/clear_button" android:background="@color/colorMicrochipRed" android:layout_width="80.0dip" android:layout_height="40.0dip" android:text="@string/clear" android:layout_below="@id/serial_label_container" android:layout_marginEnd="16.0dip" android:layout_alignParentEnd="true" />
+                    <ScrollView android:id="@id/serial_scroll_view" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="144.0dip" android:layout_marginTop="8.0dip" android:layout_below="@id/language_tabs" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+                        <TextView android:textColor="@color/colorBlack" android:id="@id/serial_text_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="false" />
+                    </ScrollView>
+                    <LinearLayout android:id="@id/serial_write_container" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginTop="16.0dip" android:layout_below="@id/serial_scroll_view" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+                        <EditText android:textColor="@color/colorBlack" android:id="@id/write_edit_text" android:background="@android:color/white" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.7" android:inputType="text" />
+                        <Button android:textColor="@android:color/white" android:id="@id/write_button" android:background="@color/colorMicrochipRed" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/write" android:layout_weight="0.3" android:layout_marginStart="16.0dip" android:labelFor="@id/write_edit_text" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <Button android:textColor="@android:color/white" android:id="@id/microchip_references_button" android:background="@color/colorMicrochipRed" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" android:text="@string/microchip_ref_docs" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+                <View android:layout_width="fill_parent" android:layout_height="44.0dip" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</RelativeLayout>

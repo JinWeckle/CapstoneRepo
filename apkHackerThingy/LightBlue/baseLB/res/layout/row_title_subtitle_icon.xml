@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+        <ImageView android:id="@id/status_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="@android:color/darker_gray" android:layout_centerVertical="true" android:contentDescription="@string/selected_row_accessibility" android:layout_marginEnd="16.0dip" android:layout_alignParentStart="true" />
+        <TextView android:textSize="18.0sp" android:textStyle="bold" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toStartOf="@id/info_icon" android:layout_toEndOf="@id/status_icon" />
+        <TextView android:textSize="14.0sp" android:id="@id/subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/title" android:layout_toStartOf="@id/info_icon" android:layout_toEndOf="@id/status_icon" />
+        <ImageView android:id="@id/info_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_arrow_forward" android:tint="@android:color/darker_gray" android:layout_centerVertical="true" android:contentDescription="@string/more_info_accessibility" android:layout_marginStart="8.0dip" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</LinearLayout>
