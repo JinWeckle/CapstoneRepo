@@ -65,21 +65,20 @@
 AltSoftSerial BTSerial;
 char c = ' ';
 
-
 //Desired output pins on Arduino Mega 2560
-#define LED_PIN0  49 //Wire #1    TOP
-#define LED_PIN1  44 //Wire #2
-#define LED_PIN2  41 //Wire #3
-#define LED_PIN3  38 //Wire #4
-#define LED_PIN4  37 //Wire #5
-#define LED_PIN5  30 //Wire #6
-#define LED_PIN6  29 //Wire #7
-#define LED_PIN7  26 //Wire #8
-#define LED_PIN8  25 //Wire #9
-#define LED_PIN9  22 //Wire #10  BOTTOM
+#define LED_PIN0  22 //Wire #1    TOP
+#define LED_PIN1  25 //Wire #2
+#define LED_PIN2  26 //Wire #3
+#define LED_PIN3  29 //Wire #4
+#define LED_PIN4  30 //Wire #5
+#define LED_PIN5  33 //Wire #6
+#define LED_PIN6  34 //Wire #7
+#define LED_PIN7  37 //Wire #8
+#define LED_PIN8  38 //Wire #9
+#define LED_PIN9  41 //Wire #10  BOTTOM
 
 //Length of LED Strips measured in LEDs (increasing this number increases required memory)
-#define NUM_LEDS  90
+#define NUM_LEDS  87
 
 //Number of LED Strips (if changing this, you need to edit the cycle functions)
 #define NUM_ROWS 10
@@ -98,7 +97,7 @@ char c = ' ';
    Only recognizes characters [A-Z],[0-9], ?, !, :, .
 */
 
-char WORD[] = "Welcome to the MVHS Library!";
+char WORD[50] = "Welcome to the MVHS Library!";
 //char WORD[] = "Mr Jones Class";
 //char WORD[] = " ";
 int index = 0;
@@ -698,7 +697,7 @@ void setup() {
   FastLED.addLeds<WS2812, LED_PIN7>(ledsRow7, NUM_LEDS);
   FastLED.addLeds<WS2812, LED_PIN8>(ledsRow8, NUM_LEDS);
   FastLED.addLeds<WS2812, LED_PIN9>(ledsRow9, NUM_LEDS);
-  FastLED.setBrightness(20); //0 to 255 (255 is brightest, but you cannot see the LEDs below about 25)
+  FastLED.setBrightness(255); //0 to 255 (255 is brightest, but you cannot see the LEDs below about 25)
   //LED light setup for each LED
   //NOTE: Parameters are GRB (Green, Red, Blue) NOT RGB (Red, Green, Blue)
   for ( int i = 0; i < NUM_LEDS; i++) {
@@ -729,6 +728,10 @@ void setup() {
   Serial.println(F("AT+IMME0 (SETTING AUTOCONNECT)"));
   delay(500);
 
+  BTSerial.print("AT+NOTI0");
+  Serial.println(F("AT+NOTI0 (DISABLE FEEDBACK)"));
+  delay(500);
+
   BTSerial.print("AT+ROLE0" );
   Serial.println(F("AT+ROLE0 (SETTING CLIENT)"));
   delay(500);
@@ -739,32 +742,25 @@ void(* resetFunc) (void) = 0; //Method for resetting the Arduino (just call rese
 void loop() {
   if (BTSerial.available())
   {
-    if(index == 0)
+    if (index == 0)
     {
-    memset(WORD, 0, sizeof WORD);
-      
+      memset(WORD, 0, sizeof WORD);
     }
+
     c = BTSerial.read();
 
     String tempStr;
     tempStr += c;
-    //Serial.println(tempStr);
-    //tempStr += WORD[index];
-    //for(index = 0; index < sizeof WORD; index++)
-    {
-      //Serial.println(index);
-      //memset(WORD, c, index);
-      WORD[index] = c;
-      //Serial.println(WORD[index]);
-    }
-    //memset(WORD, 0, sizeof WORD);
+    WORD[index] = c;
     Serial.println(WORD);
+
     index++;
     delay(50);
     //resetFunc();
   }
   else
   {
+    BTSerial.print("AT+RESET");
     index = 0;
   }
   //Holds temporary position of TOP_LEFT
@@ -884,7 +880,7 @@ void loop() {
   FastLED.show();
 
   //Time between each shift of the lights down the strip (measured in ms)
-  delay(50);
+  delay(20);
 
   //Moves the TOP_LEFT down one position on the strip then repeats the process
   TOP_LEFT++;
