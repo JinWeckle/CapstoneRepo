@@ -97,10 +97,10 @@ char c = ' ';
    Only recognizes characters [A-Z],[0-9], ?, !, :, .
 */
 
-char WORD[50] = "Welcome to the MVHS Library!";
+char WORD[50] = "Welcome to the MVHS Library!"; //This is the message that is getting displayed
 //char WORD[] = "Mr Jones Class";
 //char WORD[] = " ";
-int index = 0;
+int index = 0; //index is used when a new message is passed in. Look at line 747
 
 /*
    When finished, click the arrow pointing to the right at the top of the page to upload to running board
@@ -715,6 +715,7 @@ void setup() {
 
   /////////////////////////////////////////////////////////////
   /////////////////////////////////////////////////////////////
+  
   Serial.begin(9600);
   BTSerial.begin(9600);
   Serial.println(F("BTSerial started at 9600"));
@@ -740,6 +741,7 @@ void setup() {
 void(* resetFunc) (void) = 0; //Method for resetting the Arduino (just call resetFunc(); )
 
 void loop() {
+  //When the Arduino receives a message, it will erase the previous message and write the new message in one character at a time
   if (BTSerial.available())
   {
     if (index == 0)
@@ -747,8 +749,9 @@ void loop() {
       memset(WORD, 0, sizeof WORD);
     }
 
-    c = BTSerial.read();
+    c = BTSerial.read(); //c is a pointer that points to a memory address of a asskey value
 
+    //c++ uses "pass by address" not "pass by value"
     String tempStr;
     tempStr += c;
     WORD[index] = c;
@@ -761,7 +764,8 @@ void loop() {
   else
   {
     BTSerial.print("AT+RESET");
-    index = 0;
+    
+    index = 0; //index goes back to 0 after the whole message is stored
   }
   //Holds temporary position of TOP_LEFT
   int left = TOP_LEFT;
