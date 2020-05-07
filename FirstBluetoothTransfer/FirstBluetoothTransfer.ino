@@ -126,12 +126,12 @@ int index = 0;
 
 
 //Color of text lights using RGB colors *Currently set to cycle through all colors, therefore this is its starting color*
-int typeRed = 255;
-int typeGreen = 0;
-int typeBlue = 0;
+int typeRed = 0;
+int typeGreen = 61;
+int typeBlue = 14;
 
 //Color of background light using RGB colors
-int bgrdRed = 0;
+int bgrdRed = 50;
 int bgrdGreen = 0;
 int bgrdBlue = 0;
 
@@ -864,7 +864,7 @@ void loop() {
   }
 
   //Cycles through colors
-
+  /*
   if (typeRed > 0 && typeBlue == 0) {
     typeRed--;
     typeGreen++;
@@ -875,12 +875,12 @@ void loop() {
     typeBlue--;
     typeRed++;
   }
-
+  */
   //Tells FastLED to update which lights are on/off
   FastLED.show();
 
   //Time between each shift of the lights down the strip (measured in ms)
-  delay(20);
+  delay(50);
 
   //Moves the TOP_LEFT down one position on the strip then repeats the process
   TOP_LEFT++;
